@@ -16,7 +16,7 @@ namespace QuanLyCHThuoc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BUL.fBill());
+            Application.Run(new BUL.Form_Home());
         }
     }
 }
