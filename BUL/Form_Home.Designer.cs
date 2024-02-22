@@ -30,20 +30,13 @@
         {
             this.Spl_1 = new System.Windows.Forms.SplitContainer();
             this.Txt_NameCH = new System.Windows.Forms.Label();
-            this.Ico_Logo = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Spl_2 = new System.Windows.Forms.SplitContainer();
-            this.Ico_KhachHang = new System.Windows.Forms.PictureBox();
             this.txt_KT = new System.Windows.Forms.Label();
             this.txt_KH = new System.Windows.Forms.Label();
-            this.Ico_SanPham = new System.Windows.Forms.PictureBox();
             this.txt_BH = new System.Windows.Forms.Label();
-            this.Ico_BanHang = new System.Windows.Forms.PictureBox();
-            this.Ico_ThongKe = new System.Windows.Forms.PictureBox();
             this.txt_NCC = new System.Windows.Forms.Label();
             this.txt_THONGK = new System.Windows.Forms.Label();
-            this.Ico_NhaPPCC = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.mnu1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,6 +46,8 @@
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Ico_Logo = new System.Windows.Forms.PictureBox();
+            this.mnu1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,21 +58,26 @@
             this.xToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Ico_KhachHang = new System.Windows.Forms.PictureBox();
+            this.Ico_SanPham = new System.Windows.Forms.PictureBox();
+            this.Ico_BanHang = new System.Windows.Forms.PictureBox();
+            this.Ico_ThongKe = new System.Windows.Forms.PictureBox();
+            this.Ico_NhaPPCC = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Spl_1)).BeginInit();
             this.Spl_1.Panel1.SuspendLayout();
             this.Spl_1.Panel2.SuspendLayout();
             this.Spl_1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ico_Logo)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spl_2)).BeginInit();
             this.Spl_2.Panel1.SuspendLayout();
             this.Spl_2.Panel2.SuspendLayout();
             this.Spl_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Ico_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_KhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_SanPham)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_BanHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_ThongKe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_NhaPPCC)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Spl_1
@@ -114,15 +114,19 @@
             this.Txt_NameCH.TabIndex = 1;
             this.Txt_NameCH.Text = "Cửa Hàng Thuốc TG";
             // 
-            // Ico_Logo
+            // menuStrip1
             // 
-            this.Ico_Logo.BackgroundImage = global::QuanLyCHThuoc.Properties.Resources.Ảnh_chụp_màn_hình_2024_02_20_204012;
-            this.Ico_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Ico_Logo.Location = new System.Drawing.Point(10, 3);
-            this.Ico_Logo.Name = "Ico_Logo";
-            this.Ico_Logo.Size = new System.Drawing.Size(87, 77);
-            this.Ico_Logo.TabIndex = 0;
-            this.Ico_Logo.TabStop = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnu1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip1.Size = new System.Drawing.Size(885, 87);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // Spl_2
             // 
@@ -157,21 +161,6 @@
             this.Spl_2.SplitterDistance = 572;
             this.Spl_2.TabIndex = 2;
             // 
-            // Ico_KhachHang
-            // 
-            this.Ico_KhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Ico_KhachHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Ico_KhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Ico_KhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ico_KhachHang.Image = global::QuanLyCHThuoc.Properties.Resources.rating;
-            this.Ico_KhachHang.Location = new System.Drawing.Point(253, 32);
-            this.Ico_KhachHang.Name = "Ico_KhachHang";
-            this.Ico_KhachHang.Size = new System.Drawing.Size(149, 138);
-            this.Ico_KhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Ico_KhachHang.TabIndex = 0;
-            this.Ico_KhachHang.TabStop = false;
-            this.Ico_KhachHang.Click += new System.EventHandler(this.Ico_KhachHang_Click);
-            // 
             // txt_KT
             // 
             this.txt_KT.AutoSize = true;
@@ -192,20 +181,6 @@
             this.txt_KH.TabIndex = 1;
             this.txt_KH.Text = "Khách Hàng";
             // 
-            // Ico_SanPham
-            // 
-            this.Ico_SanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Ico_SanPham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Ico_SanPham.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Ico_SanPham.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ico_SanPham.Image = global::QuanLyCHThuoc.Properties.Resources.medicine;
-            this.Ico_SanPham.Location = new System.Drawing.Point(32, 266);
-            this.Ico_SanPham.Name = "Ico_SanPham";
-            this.Ico_SanPham.Size = new System.Drawing.Size(149, 138);
-            this.Ico_SanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Ico_SanPham.TabIndex = 0;
-            this.Ico_SanPham.TabStop = false;
-            // 
             // txt_BH
             // 
             this.txt_BH.AutoSize = true;
@@ -215,34 +190,6 @@
             this.txt_BH.Size = new System.Drawing.Size(93, 23);
             this.txt_BH.TabIndex = 1;
             this.txt_BH.Text = "Bán Hàng";
-            // 
-            // Ico_BanHang
-            // 
-            this.Ico_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Ico_BanHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Ico_BanHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Ico_BanHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ico_BanHang.Image = global::QuanLyCHThuoc.Properties.Resources.grocery_cart;
-            this.Ico_BanHang.Location = new System.Drawing.Point(32, 32);
-            this.Ico_BanHang.Name = "Ico_BanHang";
-            this.Ico_BanHang.Size = new System.Drawing.Size(149, 138);
-            this.Ico_BanHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Ico_BanHang.TabIndex = 0;
-            this.Ico_BanHang.TabStop = false;
-            // 
-            // Ico_ThongKe
-            // 
-            this.Ico_ThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Ico_ThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Ico_ThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Ico_ThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ico_ThongKe.Image = global::QuanLyCHThuoc.Properties.Resources.analytics1;
-            this.Ico_ThongKe.Location = new System.Drawing.Point(36, 32);
-            this.Ico_ThongKe.Name = "Ico_ThongKe";
-            this.Ico_ThongKe.Size = new System.Drawing.Size(149, 138);
-            this.Ico_ThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Ico_ThongKe.TabIndex = 0;
-            this.Ico_ThongKe.TabStop = false;
             // 
             // txt_NCC
             // 
@@ -264,52 +211,6 @@
             this.txt_THONGK.TabIndex = 1;
             this.txt_THONGK.Text = "Doanh Thu";
             this.txt_THONGK.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // Ico_NhaPPCC
-            // 
-            this.Ico_NhaPPCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.Ico_NhaPPCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Ico_NhaPPCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Ico_NhaPPCC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ico_NhaPPCC.Image = global::QuanLyCHThuoc.Properties.Resources.supplier;
-            this.Ico_NhaPPCC.Location = new System.Drawing.Point(36, 266);
-            this.Ico_NhaPPCC.Name = "Ico_NhaPPCC";
-            this.Ico_NhaPPCC.Size = new System.Drawing.Size(149, 138);
-            this.Ico_NhaPPCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Ico_NhaPPCC.TabIndex = 0;
-            this.Ico_NhaPPCC.TabStop = false;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnu1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(885, 87);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // mnu1
-            // 
-            this.mnu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.mnu1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem11,
-            this.toolStripMenuItem12,
-            this.toolStripMenuItem13,
-            this.toolStripMenuItem14});
-            this.mnu1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.mnu1.Image = global::QuanLyCHThuoc.Properties.Resources.menu;
-            this.mnu1.ImageTransparentColor = System.Drawing.Color.Transparent;
-            this.mnu1.Name = "mnu1";
-            this.mnu1.RightToLeftAutoMirrorImage = true;
-            this.mnu1.Size = new System.Drawing.Size(80, 83);
-            this.mnu1.Text = "Menu";
-            this.mnu1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mnu1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripMenuItem2
             // 
@@ -364,13 +265,41 @@
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem10.Text = "9";
+            // 
+            // Ico_Logo
+            // 
+            this.Ico_Logo.BackgroundImage = global::QuanLyCHThuoc.Properties.Resources.Ảnh_chụp_màn_hình_2024_02_20_204012;
+            this.Ico_Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Ico_Logo.Location = new System.Drawing.Point(10, 3);
+            this.Ico_Logo.Name = "Ico_Logo";
+            this.Ico_Logo.Size = new System.Drawing.Size(87, 77);
+            this.Ico_Logo.TabIndex = 0;
+            this.Ico_Logo.TabStop = false;
+            // 
+            // mnu1
+            // 
+            this.mnu1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.mnu1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem11,
+            this.toolStripMenuItem12,
+            this.toolStripMenuItem13,
+            this.toolStripMenuItem14});
+            this.mnu1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.mnu1.Image = global::QuanLyCHThuoc.Properties.Resources.menu;
+            this.mnu1.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.mnu1.Name = "mnu1";
+            this.mnu1.RightToLeftAutoMirrorImage = true;
+            this.mnu1.Size = new System.Drawing.Size(80, 83);
+            this.mnu1.Text = "Menu";
+            this.mnu1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mnu1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem11.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem11.Text = "1";
             // 
             // toolStripMenuItem12
@@ -380,31 +309,31 @@
             this.bToolStripMenuItem,
             this.cToolStripMenuItem});
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem12.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem12.Text = "2";
             // 
             // aToolStripMenuItem
             // 
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(101, 26);
             this.aToolStripMenuItem.Text = "a";
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(101, 26);
             this.bToolStripMenuItem.Text = "b";
             // 
             // cToolStripMenuItem
             // 
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(101, 26);
             this.cToolStripMenuItem.Text = "c";
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem13.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem13.Text = "3";
             // 
             // toolStripMenuItem14
@@ -414,26 +343,98 @@
             this.yToolStripMenuItem,
             this.zToolStripMenuItem});
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
-            this.toolStripMenuItem14.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem14.Size = new System.Drawing.Size(100, 26);
             this.toolStripMenuItem14.Text = "4";
             // 
             // xToolStripMenuItem
             // 
             this.xToolStripMenuItem.Name = "xToolStripMenuItem";
-            this.xToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.xToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
             this.xToolStripMenuItem.Text = "x";
             // 
             // yToolStripMenuItem
             // 
             this.yToolStripMenuItem.Name = "yToolStripMenuItem";
-            this.yToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.yToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
             this.yToolStripMenuItem.Text = "y";
             // 
             // zToolStripMenuItem
             // 
             this.zToolStripMenuItem.Name = "zToolStripMenuItem";
-            this.zToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zToolStripMenuItem.Size = new System.Drawing.Size(99, 26);
             this.zToolStripMenuItem.Text = "z";
+            // 
+            // Ico_KhachHang
+            // 
+            this.Ico_KhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ico_KhachHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Ico_KhachHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ico_KhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ico_KhachHang.Image = global::QuanLyCHThuoc.Properties.Resources.rating;
+            this.Ico_KhachHang.Location = new System.Drawing.Point(253, 32);
+            this.Ico_KhachHang.Name = "Ico_KhachHang";
+            this.Ico_KhachHang.Size = new System.Drawing.Size(149, 138);
+            this.Ico_KhachHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Ico_KhachHang.TabIndex = 0;
+            this.Ico_KhachHang.TabStop = false;
+            this.Ico_KhachHang.Click += new System.EventHandler(this.Ico_KhachHang_Click);
+            // 
+            // Ico_SanPham
+            // 
+            this.Ico_SanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ico_SanPham.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Ico_SanPham.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ico_SanPham.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ico_SanPham.Image = global::QuanLyCHThuoc.Properties.Resources.medicine;
+            this.Ico_SanPham.Location = new System.Drawing.Point(32, 266);
+            this.Ico_SanPham.Name = "Ico_SanPham";
+            this.Ico_SanPham.Size = new System.Drawing.Size(149, 138);
+            this.Ico_SanPham.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Ico_SanPham.TabIndex = 0;
+            this.Ico_SanPham.TabStop = false;
+            // 
+            // Ico_BanHang
+            // 
+            this.Ico_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ico_BanHang.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Ico_BanHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ico_BanHang.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ico_BanHang.Image = global::QuanLyCHThuoc.Properties.Resources.grocery_cart;
+            this.Ico_BanHang.Location = new System.Drawing.Point(32, 32);
+            this.Ico_BanHang.Name = "Ico_BanHang";
+            this.Ico_BanHang.Size = new System.Drawing.Size(149, 138);
+            this.Ico_BanHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Ico_BanHang.TabIndex = 0;
+            this.Ico_BanHang.TabStop = false;
+            this.Ico_BanHang.Click += new System.EventHandler(this.Ico_BanHang_Click);
+            // 
+            // Ico_ThongKe
+            // 
+            this.Ico_ThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ico_ThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Ico_ThongKe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ico_ThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ico_ThongKe.Image = global::QuanLyCHThuoc.Properties.Resources.analytics1;
+            this.Ico_ThongKe.Location = new System.Drawing.Point(36, 32);
+            this.Ico_ThongKe.Name = "Ico_ThongKe";
+            this.Ico_ThongKe.Size = new System.Drawing.Size(149, 138);
+            this.Ico_ThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Ico_ThongKe.TabIndex = 0;
+            this.Ico_ThongKe.TabStop = false;
+            // 
+            // Ico_NhaPPCC
+            // 
+            this.Ico_NhaPPCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Ico_NhaPPCC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Ico_NhaPPCC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Ico_NhaPPCC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ico_NhaPPCC.Image = global::QuanLyCHThuoc.Properties.Resources.supplier;
+            this.Ico_NhaPPCC.Location = new System.Drawing.Point(36, 266);
+            this.Ico_NhaPPCC.Name = "Ico_NhaPPCC";
+            this.Ico_NhaPPCC.Size = new System.Drawing.Size(149, 138);
+            this.Ico_NhaPPCC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Ico_NhaPPCC.TabIndex = 0;
+            this.Ico_NhaPPCC.TabStop = false;
             // 
             // Form_Home
             // 
@@ -453,20 +454,20 @@
             this.Spl_1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Spl_1)).EndInit();
             this.Spl_1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Ico_Logo)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.Spl_2.Panel1.ResumeLayout(false);
             this.Spl_2.Panel1.PerformLayout();
             this.Spl_2.Panel2.ResumeLayout(false);
             this.Spl_2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Spl_2)).EndInit();
             this.Spl_2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Ico_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_KhachHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_SanPham)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_BanHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_ThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_NhaPPCC)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
