@@ -52,6 +52,12 @@
     <Compile Include="BUL\fBill.Designer.cs">
       <DependentUpon>fBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUL\fMedicineWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUL\fMedicineWarehouse.Designer.cs">
+      <DependentUpon>fMedicineWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUL\Form_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BUL\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUL\fMedicineWarehouse.resx">
+      <DependentUpon>fMedicineWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BUL\Form_Home.resx">
       <DependentUpon>Form_Home.cs</DependentUpon>
