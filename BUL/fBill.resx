@@ -135,8 +135,6 @@
   <metadata name="clNote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-<<<<<<< HEAD
-=======
   <metadata name="clNameMedicine.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -155,5 +153,4 @@
   <metadata name="clNote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
->>>>>>> 2312612808193afe860ccf5a89d6c23401318479
 </root>

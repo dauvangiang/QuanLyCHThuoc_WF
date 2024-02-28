@@ -406,9 +406,7 @@
             this.Ico_BanHang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ico_BanHang.TabIndex = 0;
             this.Ico_BanHang.TabStop = false;
-
             this.Ico_BanHang.Click += new System.EventHandler(this.Ico_BanHang_Click);
-
             // 
             // Ico_ThongKe
             // 
