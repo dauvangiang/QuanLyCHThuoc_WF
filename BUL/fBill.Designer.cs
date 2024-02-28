@@ -249,8 +249,8 @@ namespace QuanLyCHThuoc.BUL
             // 
             // clNameMedicine
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle4;
             this.clNameMedicine.HeaderText = "Thuốc điều trị";
             this.clNameMedicine.Items.AddRange(new object[] {
             "Thuốc 1",
