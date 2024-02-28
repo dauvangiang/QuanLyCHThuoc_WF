@@ -46,16 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUL\fBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUL\fBill.Designer.cs">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUL\fMedicineWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUL\fMedicineWarehouse.Designer.cs">
+      <DependentUpon>fMedicineWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="BUL\Form_Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="BUL\Form_Home.Designer.cs">
       <DependentUpon>Form_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUL\Form_QLKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUL\Form_QLKH.Designer.cs">
+      <DependentUpon>Form_QLKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUL\Form_TKBC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUL\Form_TKBC.Designer.cs">
+      <DependentUpon>Form_TKBC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BUL\Form_LSMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BUL\Form_LSMH.Designer.cs">
+      <DependentUpon>Form_LSMH.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BUL\fBill.resx">
+      <DependentUpon>fBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUL\fMedicineWarehouse.resx">
+      <DependentUpon>fMedicineWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BUL\Form_Home.resx">
       <DependentUpon>Form_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUL\Form_LSMH.resx">
+      <DependentUpon>Form_LSMH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUL\Form_QLKH.resx">
+      <DependentUpon>Form_QLKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BUL\Form_TKBC.resx">
+      <DependentUpon>Form_TKBC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\menu11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
