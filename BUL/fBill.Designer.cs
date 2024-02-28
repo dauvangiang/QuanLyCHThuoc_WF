@@ -30,7 +30,7 @@ namespace QuanLyCHThuoc.BUL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbRefunds = new System.Windows.Forms.TextBox();
             this.tbMoneyGivenByGuests = new System.Windows.Forms.TextBox();
@@ -63,12 +63,14 @@ namespace QuanLyCHThuoc.BUL
             this.tbCodeBill = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.tbRefunds);
             this.panel1.Controls.Add(this.tbMoneyGivenByGuests);
             this.panel1.Controls.Add(this.tbNeedPayment);
@@ -237,8 +239,8 @@ namespace QuanLyCHThuoc.BUL
             // 
             // clNameMedicine
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle1;
             this.clNameMedicine.HeaderText = "Thuốc điều trị";
             this.clNameMedicine.Items.AddRange(new object[] {
             "Thuốc 1",
@@ -401,6 +403,16 @@ namespace QuanLyCHThuoc.BUL
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên nhà thuốc";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(946, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(255, 27);
+            this.textBox1.TabIndex = 26;
+            this.textBox1.TabStop = false;
+            // 
             // fBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -452,6 +464,6 @@ namespace QuanLyCHThuoc.BUL
         private DataGridViewTextBoxColumn clIntoMoney;
         private DataGridViewTextBoxColumn clNote;
         private TextBox tbDateTime;
-
+        private TextBox textBox1;
     }
 }
