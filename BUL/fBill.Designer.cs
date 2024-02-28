@@ -30,7 +30,7 @@ namespace QuanLyCHThuoc.BUL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tbRefunds = new System.Windows.Forms.TextBox();
             this.tbMoneyGivenByGuests = new System.Windows.Forms.TextBox();
@@ -44,8 +44,13 @@ namespace QuanLyCHThuoc.BUL
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbDateTime = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clNameMedicine = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clQuanty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clIntoMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbAge = new System.Windows.Forms.TextBox();
             this.tbSymptoms = new System.Windows.Forms.TextBox();
             this.tbPhoneNumber = new System.Windows.Forms.TextBox();
@@ -58,12 +63,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbCodeBill = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.clNameMedicine = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.clUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clQuanty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clIntoMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbDateTime = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -220,16 +220,6 @@ namespace QuanLyCHThuoc.BUL
             this.label8.TabIndex = 14;
             this.label8.Text = "Ngày:";
             // 
-            // tbDateTime
-            // 
-            this.tbDateTime.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDateTime.Location = new System.Drawing.Point(946, 34);
-            this.tbDateTime.Name = "tbDateTime";
-            this.tbDateTime.ReadOnly = true;
-            this.tbDateTime.Size = new System.Drawing.Size(255, 27);
-            this.tbDateTime.TabIndex = 13;
-            this.tbDateTime.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -246,6 +236,57 @@ namespace QuanLyCHThuoc.BUL
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1204, 434);
             this.dataGridView1.TabIndex = 12;
+            // 
+            // clNameMedicine
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle2;
+            this.clNameMedicine.HeaderText = "Thuốc điều trị";
+            this.clNameMedicine.Items.AddRange(new object[] {
+            "Thuốc 1",
+            "Thuốc 2",
+            "Thuốc 3"});
+            this.clNameMedicine.MinimumWidth = 6;
+            this.clNameMedicine.Name = "clNameMedicine";
+            this.clNameMedicine.Width = 275;
+            // 
+            // clUnit
+            // 
+            this.clUnit.HeaderText = "Đơn vị";
+            this.clUnit.MinimumWidth = 6;
+            this.clUnit.Name = "clUnit";
+            this.clUnit.ReadOnly = true;
+            this.clUnit.Width = 72;
+            // 
+            // clQuanty
+            // 
+            this.clQuanty.HeaderText = "S.Lượng";
+            this.clQuanty.MinimumWidth = 6;
+            this.clQuanty.Name = "clQuanty";
+            this.clQuanty.Width = 68;
+            // 
+            // clPrice
+            // 
+            this.clPrice.HeaderText = "Đơn giá";
+            this.clPrice.MinimumWidth = 6;
+            this.clPrice.Name = "clPrice";
+            this.clPrice.ReadOnly = true;
+            this.clPrice.Width = 95;
+            // 
+            // clIntoMoney
+            // 
+            this.clIntoMoney.HeaderText = "Thành tiền";
+            this.clIntoMoney.MinimumWidth = 6;
+            this.clIntoMoney.Name = "clIntoMoney";
+            this.clIntoMoney.ReadOnly = true;
+            this.clIntoMoney.Width = 105;
+            // 
+            // clNote
+            // 
+            this.clNote.HeaderText = "Ghi chú";
+            this.clNote.MinimumWidth = 6;
+            this.clNote.Name = "clNote";
+            this.clNote.Width = 235;
             // 
             // tbAge
             // 
@@ -359,56 +400,15 @@ namespace QuanLyCHThuoc.BUL
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên nhà thuốc";
             // 
-            // clNameMedicine
+            // tbDateTime
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle4;
-            this.clNameMedicine.HeaderText = "Thuốc điều trị";
-            this.clNameMedicine.Items.AddRange(new object[] {
-            "Thuốc 1",
-            "Thuốc 2",
-            "Thuốc 3"});
-            this.clNameMedicine.MinimumWidth = 6;
-            this.clNameMedicine.Name = "clNameMedicine";
-            this.clNameMedicine.Width = 275;
-            // 
-            // clUnit
-            // 
-            this.clUnit.HeaderText = "Đơn vị";
-            this.clUnit.MinimumWidth = 6;
-            this.clUnit.Name = "clUnit";
-            this.clUnit.ReadOnly = true;
-            this.clUnit.Width = 72;
-            // 
-            // clQuanty
-            // 
-            this.clQuanty.HeaderText = "S.Lượng";
-            this.clQuanty.MinimumWidth = 6;
-            this.clQuanty.Name = "clQuanty";
-            this.clQuanty.Width = 68;
-            // 
-            // clPrice
-            // 
-            this.clPrice.HeaderText = "Đơn giá";
-            this.clPrice.MinimumWidth = 6;
-            this.clPrice.Name = "clPrice";
-            this.clPrice.ReadOnly = true;
-            this.clPrice.Width = 95;
-            // 
-            // clIntoMoney
-            // 
-            this.clIntoMoney.HeaderText = "Thành tiền";
-            this.clIntoMoney.MinimumWidth = 6;
-            this.clIntoMoney.Name = "clIntoMoney";
-            this.clIntoMoney.ReadOnly = true;
-            this.clIntoMoney.Width = 105;
-            // 
-            // clNote
-            // 
-            this.clNote.HeaderText = "Ghi chú";
-            this.clNote.MinimumWidth = 6;
-            this.clNote.Name = "clNote";
-            this.clNote.Width = 235;
+            this.tbDateTime.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDateTime.Location = new System.Drawing.Point(946, 34);
+            this.tbDateTime.Name = "tbDateTime";
+            this.tbDateTime.ReadOnly = true;
+            this.tbDateTime.Size = new System.Drawing.Size(255, 27);
+            this.tbDateTime.TabIndex = 13;
+            this.tbDateTime.TabStop = false;
             // 
             // fBill
             // 
@@ -442,7 +442,6 @@ namespace QuanLyCHThuoc.BUL
         private System.Windows.Forms.TextBox tbPhoneNumber;
         private System.Windows.Forms.TextBox tbCustomer;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox tbDateTime;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox tbTotal;
         private System.Windows.Forms.Label label10;
@@ -461,5 +460,6 @@ namespace QuanLyCHThuoc.BUL
         private DataGridViewTextBoxColumn clPrice;
         private DataGridViewTextBoxColumn clIntoMoney;
         private DataGridViewTextBoxColumn clNote;
+        private TextBox tbDateTime;
     }
 }

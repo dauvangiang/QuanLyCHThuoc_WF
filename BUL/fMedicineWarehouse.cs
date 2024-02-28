@@ -15,6 +15,8 @@ namespace QuanLyCHThuoc.BUL
         public fMedicineWarehouse()
         {
             InitializeComponent();
+            this.comboBox1.SelectedItem = "Tất cả";
+            this.comboBox2.SelectedItem = "A → Z";
         }
 
         private void tbSearch_Click(object sender, EventArgs e)
