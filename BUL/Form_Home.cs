@@ -51,8 +51,7 @@ namespace QuanLyCHThuoc.BUL
 
         private void Ico_BanHang_Click(object sender, EventArgs e)
         {
-            fBill f = new fBill();
-            f.Show();
+   
         }
     }
 }
