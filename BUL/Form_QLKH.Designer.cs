@@ -34,7 +34,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_TK = new System.Windows.Forms.Label();
             this.txt_SS = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.But_Sua = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -46,12 +45,16 @@
             this.txt_Ma = new System.Windows.Forms.Label();
             this.txt_Name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -74,7 +77,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel2.Controls.Add(this.But_Sua);
             this.splitContainer1.Panel2.Controls.Add(this.textBox5);
             this.splitContainer1.Panel2.Controls.Add(this.textBox4);
@@ -87,8 +90,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.txt_Name);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1073, 580);
-            this.splitContainer1.SplitterDistance = 681;
+            this.splitContainer1.Size = new System.Drawing.Size(1444, 759);
+            this.splitContainer1.SplitterDistance = 916;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
@@ -102,7 +105,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(671, 522);
+            this.dataGridView1.Size = new System.Drawing.Size(906, 701);
             this.dataGridView1.TabIndex = 2;
             // 
             // textBox1
@@ -123,7 +126,7 @@
             "Z→A"});
             this.comboBox1.Location = new System.Drawing.Point(463, 13);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 27);
+            this.comboBox1.Size = new System.Drawing.Size(446, 27);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Tag = "";
             this.comboBox1.Text = "A→Z";
@@ -146,24 +149,14 @@
             this.txt_SS.TabIndex = 1;
             this.txt_SS.Text = "Sắp Xếp";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Location = new System.Drawing.Point(17, 526);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "L.Sử Mua";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // But_Sua
             // 
             this.But_Sua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.But_Sua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.But_Sua.Location = new System.Drawing.Point(218, 526);
+            this.But_Sua.Location = new System.Drawing.Point(354, 675);
             this.But_Sua.Name = "But_Sua";
-            this.But_Sua.Size = new System.Drawing.Size(75, 40);
+            this.But_Sua.Size = new System.Drawing.Size(75, 70);
             this.But_Sua.TabIndex = 2;
             this.But_Sua.Text = "Sửa";
             this.But_Sua.UseVisualStyleBackColor = false;
@@ -175,7 +168,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Location = new System.Drawing.Point(105, 288);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(272, 27);
+            this.textBox5.Size = new System.Drawing.Size(408, 27);
             this.textBox5.TabIndex = 1;
             this.textBox5.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -186,7 +179,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Location = new System.Drawing.Point(106, 252);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(272, 27);
+            this.textBox4.Size = new System.Drawing.Size(408, 27);
             this.textBox4.TabIndex = 1;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -197,7 +190,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(130, 220);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(257, 27);
+            this.textBox3.Size = new System.Drawing.Size(393, 27);
             this.textBox3.TabIndex = 1;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -208,7 +201,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(102, 190);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(272, 27);
+            this.textBox2.Size = new System.Drawing.Size(408, 27);
             this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -217,9 +210,9 @@
             this.But_Xoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.But_Xoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.But_Xoa.Location = new System.Drawing.Point(299, 526);
+            this.But_Xoa.Location = new System.Drawing.Point(435, 675);
             this.But_Xoa.Name = "But_Xoa";
-            this.But_Xoa.Size = new System.Drawing.Size(75, 40);
+            this.But_Xoa.Size = new System.Drawing.Size(75, 70);
             this.But_Xoa.TabIndex = 2;
             this.But_Xoa.Text = "Xóa";
             this.But_Xoa.UseVisualStyleBackColor = false;
@@ -264,18 +257,40 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::QuanLyCHThuoc.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(117, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(203, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(118, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dataGridView2);
+            this.groupBox1.Location = new System.Drawing.Point(17, 340);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(493, 310);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lịch Sử Mua Hàng";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 23);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(487, 284);
+            this.dataGridView2.TabIndex = 0;
             // 
             // Form_QLKH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 580);
+            this.ClientSize = new System.Drawing.Size(1444, 759);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -290,6 +305,8 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -313,6 +330,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button But_Sua;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
