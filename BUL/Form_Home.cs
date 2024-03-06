@@ -53,5 +53,30 @@ namespace QuanLyCHThuoc.BUL
         {
    
         }
+
+        private void txt_BH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ico_SanPham_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

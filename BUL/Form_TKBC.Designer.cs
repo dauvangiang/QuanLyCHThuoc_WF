@@ -87,7 +87,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(445, 33);
+            this.dateTimePicker2.Location = new System.Drawing.Point(444, 33);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);
             this.dateTimePicker2.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.but_Prin.Name = "but_Prin";
             this.but_Prin.Size = new System.Drawing.Size(75, 53);
             this.but_Prin.TabIndex = 5;
-            this.but_Prin.Text = "Xuất Excel";
+            this.but_Prin.Text = "Xác Nhận";
             this.but_Prin.UseVisualStyleBackColor = false;
             // 
             // Form_TKBC
