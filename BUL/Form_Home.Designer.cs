@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
             this.txt_THONGK = new System.Windows.Forms.Label();
             this.Ico_ThongKe = new System.Windows.Forms.PictureBox();
             this.Ico_BanHang = new System.Windows.Forms.PictureBox();
@@ -69,63 +60,7 @@
             this.Spl_1.Panel2.SuspendLayout();
             this.Spl_1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem2.Text = "1";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem3.Text = "2";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem4.Text = "3";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem5.Text = "4";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem6.Text = "5";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem7.Text = "6";
-            // 
-            // toolStripMenuItem8
-            // 
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem8.Text = "7";
-            // 
-            // toolStripMenuItem9
-            // 
-            this.toolStripMenuItem9.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem10});
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(224, 26);
-            this.toolStripMenuItem9.Text = "8";
-            // 
-            // toolStripMenuItem10
-            // 
-            this.toolStripMenuItem10.Name = "toolStripMenuItem10";
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(100, 26);
-            this.toolStripMenuItem10.Text = "9";
-            // 
+            //
             // txt_THONGK
             // 
             this.txt_THONGK.AutoSize = true;
@@ -253,7 +188,7 @@
             this.menuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(80, 66);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(80, 57);
             this.menuToolStripMenuItem.Text = "Menu";
             this.menuToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.menuToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
@@ -374,6 +309,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Form_Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Ico_ThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_BanHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_SanPham)).EndInit();
