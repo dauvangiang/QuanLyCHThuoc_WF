@@ -388,7 +388,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Spl_1)).EndInit();
             this.Spl_1.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion

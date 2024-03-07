@@ -55,7 +55,7 @@
             // txt_Time
             // 
             this.txt_Time.AutoSize = true;
-            this.txt_Time.Location = new System.Drawing.Point(12, 0);
+            this.txt_Time.Location = new System.Drawing.Point(12, 9);
             this.txt_Time.Name = "txt_Time";
             this.txt_Time.Size = new System.Drawing.Size(81, 19);
             this.txt_Time.TabIndex = 1;
@@ -63,6 +63,8 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(84, 33);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
@@ -90,6 +92,8 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(444, 33);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 27);

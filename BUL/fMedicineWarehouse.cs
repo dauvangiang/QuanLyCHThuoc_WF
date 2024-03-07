@@ -15,23 +15,32 @@ namespace QuanLyCHThuoc.BUL
         public fMedicineWarehouse()
         {
             InitializeComponent();
-            this.comboBox1.SelectedItem = "Tất cả";
-            this.comboBox2.SelectedItem = "A → Z";
+            //this.cbDanhMuc.SelectedItem = "Tất cả";
+            //this.cbPhanLoai.SelectedItem = "A → Z";
         }
 
-        private void tbSearch_Click(object sender, EventArgs e)
+        private void tbTimKiem_Click(object sender, EventArgs e)
         {
-            this.tbSearch.Text = "";
-            this.tbSearch.ForeColor = System.Drawing.SystemColors.WindowText;
-        }
-
-        private void tbSearch_Leave(object sender, EventArgs e)
-        {
-            if (this.tbSearch.Text == "")
+            if (tbTimKiem.Text == "Tìm kiếm...")
             {
-                this.tbSearch.ForeColor = System.Drawing.SystemColors.GrayText;
-                this.tbSearch.Text = "Tìm kiếm...";
+                this.tbTimKiem.Text = "";
+                this.tbTimKiem.ForeColor = System.Drawing.SystemColors.WindowText;
             }
+        }
+
+        private void tbTimKiem_Leave(object sender, EventArgs e)
+        {
+            if (this.tbTimKiem.Text == "")
+            {
+                this.tbTimKiem.ForeColor = System.Drawing.SystemColors.GrayText;
+                this.tbTimKiem.Text = "Tìm kiếm...";
+            }
+        }
+
+        private void btThemSP_Click(object sender, EventArgs e)
+        {
+            btThemSP.Visible = btSuaSP.Visible = btXoaSp.Visible = false;
+            btLuuSP.Visible = btHuySP.Visible = true;
         }
     }
 }
