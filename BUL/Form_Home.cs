@@ -78,5 +78,10 @@ namespace QuanLyCHThuoc.BUL
         {
 
         }
+
+        private void Form_Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
