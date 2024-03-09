@@ -94,12 +94,13 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 89);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 89);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(538, 525);
+            this.dataGridView1.Size = new System.Drawing.Size(523, 517);
             this.dataGridView1.TabIndex = 2;
             // 
             // textBox1
@@ -128,7 +129,7 @@
             // txt_TK
             // 
             this.txt_TK.AutoSize = true;
-            this.txt_TK.Location = new System.Drawing.Point(3, 23);
+            this.txt_TK.Location = new System.Drawing.Point(7, 23);
             this.txt_TK.Name = "txt_TK";
             this.txt_TK.Size = new System.Drawing.Size(78, 19);
             this.txt_TK.TabIndex = 1;
@@ -182,6 +183,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 23);

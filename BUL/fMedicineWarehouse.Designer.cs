@@ -31,8 +31,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpSanPham = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgvDsSP = new System.Windows.Forms.DataGridView();
-            this.grbDetail = new System.Windows.Forms.GroupBox();
+            this.dgvDsSPKho = new System.Windows.Forms.DataGridView();
+            this.grbChiTietSP = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
             this.cbNhaSX = new System.Windows.Forms.ComboBox();
             this.dtpHSD = new System.Windows.Forms.DateTimePicker();
@@ -71,7 +71,7 @@
             this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.tpDanhMuc = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvDanhMuc = new System.Windows.Forms.DataGridView();
             this.btHuyDanhMuc = new System.Windows.Forms.Button();
             this.btLuuDanhMuc = new System.Windows.Forms.Button();
             this.btThemDanhMuc = new System.Windows.Forms.Button();
@@ -82,10 +82,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tpPhanLoai = new System.Windows.Forms.TabPage();
-            this.cbDanhMucPhanLoai = new System.Windows.Forms.ComboBox();
+            this.cbDanhMucPL = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvPhanLoai = new System.Windows.Forms.DataGridView();
             this.btHuyPhanLoai = new System.Windows.Forms.Button();
             this.btLuuPhanLoai = new System.Windows.Forms.Button();
             this.btThemPhanLoai = new System.Windows.Forms.Button();
@@ -99,7 +99,7 @@
             this.tbSdtDoiTac = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvDoiTac = new System.Windows.Forms.DataGridView();
             this.btHuyDoiTac = new System.Windows.Forms.Button();
             this.btLuuDoiTac = new System.Windows.Forms.Button();
             this.btThemDoiTac = new System.Windows.Forms.Button();
@@ -115,18 +115,18 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDsSP)).BeginInit();
-            this.grbDetail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDsSPKho)).BeginInit();
+            this.grbChiTietSP.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tpDanhMuc.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).BeginInit();
             this.tpPhanLoai.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhanLoai)).BeginInit();
             this.tpDoiTac.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoiTac)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -169,66 +169,67 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.dgvDsSP);
+            this.splitContainer1.Panel1.Controls.Add(this.dgvDsSPKho);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.grbDetail);
+            this.splitContainer1.Panel2.Controls.Add(this.grbChiTietSP);
             this.splitContainer1.Size = new System.Drawing.Size(1179, 671);
-            this.splitContainer1.SplitterDistance = 572;
+            this.splitContainer1.SplitterDistance = 568;
             this.splitContainer1.TabIndex = 10;
             // 
-            // dgvDsSP
+            // dgvDsSPKho
             // 
-            this.dgvDsSP.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvDsSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDsSP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDsSP.Location = new System.Drawing.Point(0, 0);
-            this.dgvDsSP.Name = "dgvDsSP";
-            this.dgvDsSP.RowHeadersWidth = 51;
-            this.dgvDsSP.RowTemplate.Height = 24;
-            this.dgvDsSP.Size = new System.Drawing.Size(572, 671);
-            this.dgvDsSP.TabIndex = 6;
+            this.dgvDsSPKho.AllowUserToAddRows = false;
+            this.dgvDsSPKho.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvDsSPKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDsSPKho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDsSPKho.Location = new System.Drawing.Point(0, 0);
+            this.dgvDsSPKho.Name = "dgvDsSPKho";
+            this.dgvDsSPKho.RowHeadersWidth = 51;
+            this.dgvDsSPKho.RowTemplate.Height = 24;
+            this.dgvDsSPKho.Size = new System.Drawing.Size(568, 671);
+            this.dgvDsSPKho.TabIndex = 6;
             // 
-            // grbDetail
+            // grbChiTietSP
             // 
-            this.grbDetail.Controls.Add(this.label20);
-            this.grbDetail.Controls.Add(this.cbNhaSX);
-            this.grbDetail.Controls.Add(this.dtpHSD);
-            this.grbDetail.Controls.Add(this.dtpNSX);
-            this.grbDetail.Controls.Add(this.cbPhanLoaiChiTiet);
-            this.grbDetail.Controls.Add(this.cbDanhMucChiTiet);
-            this.grbDetail.Controls.Add(this.tbGhiChu);
-            this.grbDetail.Controls.Add(this.tbSoLuongCon);
-            this.grbDetail.Controls.Add(this.tbGiaBan);
-            this.grbDetail.Controls.Add(this.tbGiaNhap);
-            this.grbDetail.Controls.Add(this.tbDonViTinh);
-            this.grbDetail.Controls.Add(this.tbTenSP);
-            this.grbDetail.Controls.Add(this.tbMaSP);
-            this.grbDetail.Controls.Add(this.btHuySP);
-            this.grbDetail.Controls.Add(this.btLuuSP);
-            this.grbDetail.Controls.Add(this.btThemSP);
-            this.grbDetail.Controls.Add(this.label11);
-            this.grbDetail.Controls.Add(this.label10);
-            this.grbDetail.Controls.Add(this.label9);
-            this.grbDetail.Controls.Add(this.label8);
-            this.grbDetail.Controls.Add(this.label7);
-            this.grbDetail.Controls.Add(this.label6);
-            this.grbDetail.Controls.Add(this.label5);
-            this.grbDetail.Controls.Add(this.label4);
-            this.grbDetail.Controls.Add(this.label3);
-            this.grbDetail.Controls.Add(this.label2);
-            this.grbDetail.Controls.Add(this.label1);
-            this.grbDetail.Controls.Add(this.btXoaSp);
-            this.grbDetail.Controls.Add(this.btSuaSP);
-            this.grbDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbDetail.Font = new System.Drawing.Font("Arial", 10.4F, System.Drawing.FontStyle.Bold);
-            this.grbDetail.Location = new System.Drawing.Point(0, 0);
-            this.grbDetail.Name = "grbDetail";
-            this.grbDetail.Size = new System.Drawing.Size(603, 671);
-            this.grbDetail.TabIndex = 5;
-            this.grbDetail.TabStop = false;
-            this.grbDetail.Text = "Thông tin chi tiết:";
+            this.grbChiTietSP.Controls.Add(this.label20);
+            this.grbChiTietSP.Controls.Add(this.cbNhaSX);
+            this.grbChiTietSP.Controls.Add(this.dtpHSD);
+            this.grbChiTietSP.Controls.Add(this.dtpNSX);
+            this.grbChiTietSP.Controls.Add(this.cbPhanLoaiChiTiet);
+            this.grbChiTietSP.Controls.Add(this.cbDanhMucChiTiet);
+            this.grbChiTietSP.Controls.Add(this.tbGhiChu);
+            this.grbChiTietSP.Controls.Add(this.tbSoLuongCon);
+            this.grbChiTietSP.Controls.Add(this.tbGiaBan);
+            this.grbChiTietSP.Controls.Add(this.tbGiaNhap);
+            this.grbChiTietSP.Controls.Add(this.tbDonViTinh);
+            this.grbChiTietSP.Controls.Add(this.tbTenSP);
+            this.grbChiTietSP.Controls.Add(this.tbMaSP);
+            this.grbChiTietSP.Controls.Add(this.btHuySP);
+            this.grbChiTietSP.Controls.Add(this.btLuuSP);
+            this.grbChiTietSP.Controls.Add(this.btThemSP);
+            this.grbChiTietSP.Controls.Add(this.label11);
+            this.grbChiTietSP.Controls.Add(this.label10);
+            this.grbChiTietSP.Controls.Add(this.label9);
+            this.grbChiTietSP.Controls.Add(this.label8);
+            this.grbChiTietSP.Controls.Add(this.label7);
+            this.grbChiTietSP.Controls.Add(this.label6);
+            this.grbChiTietSP.Controls.Add(this.label5);
+            this.grbChiTietSP.Controls.Add(this.label4);
+            this.grbChiTietSP.Controls.Add(this.label3);
+            this.grbChiTietSP.Controls.Add(this.label2);
+            this.grbChiTietSP.Controls.Add(this.label1);
+            this.grbChiTietSP.Controls.Add(this.btXoaSp);
+            this.grbChiTietSP.Controls.Add(this.btSuaSP);
+            this.grbChiTietSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grbChiTietSP.Font = new System.Drawing.Font("Arial", 10.4F, System.Drawing.FontStyle.Bold);
+            this.grbChiTietSP.Location = new System.Drawing.Point(0, 0);
+            this.grbChiTietSP.Name = "grbChiTietSP";
+            this.grbChiTietSP.Size = new System.Drawing.Size(607, 671);
+            this.grbChiTietSP.TabIndex = 5;
+            this.grbChiTietSP.TabStop = false;
+            this.grbChiTietSP.Text = "Thông tin chi tiết:";
             // 
             // label20
             // 
@@ -250,7 +251,7 @@
             this.cbNhaSX.FormattingEnabled = true;
             this.cbNhaSX.Location = new System.Drawing.Point(140, 215);
             this.cbNhaSX.Name = "cbNhaSX";
-            this.cbNhaSX.Size = new System.Drawing.Size(158, 27);
+            this.cbNhaSX.Size = new System.Drawing.Size(168, 27);
             this.cbNhaSX.TabIndex = 11;
             // 
             // dtpHSD
@@ -263,7 +264,7 @@
             this.dtpHSD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpHSD.Location = new System.Drawing.Point(140, 350);
             this.dtpHSD.Name = "dtpHSD";
-            this.dtpHSD.Size = new System.Drawing.Size(158, 27);
+            this.dtpHSD.Size = new System.Drawing.Size(168, 27);
             this.dtpHSD.TabIndex = 14;
             // 
             // dtpNSX
@@ -276,7 +277,7 @@
             this.dtpNSX.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNSX.Location = new System.Drawing.Point(140, 305);
             this.dtpNSX.Name = "dtpNSX";
-            this.dtpNSX.Size = new System.Drawing.Size(158, 27);
+            this.dtpNSX.Size = new System.Drawing.Size(168, 27);
             this.dtpNSX.TabIndex = 13;
             // 
             // cbPhanLoaiChiTiet
@@ -289,7 +290,7 @@
             this.cbPhanLoaiChiTiet.FormattingEnabled = true;
             this.cbPhanLoaiChiTiet.Location = new System.Drawing.Point(140, 170);
             this.cbPhanLoaiChiTiet.Name = "cbPhanLoaiChiTiet";
-            this.cbPhanLoaiChiTiet.Size = new System.Drawing.Size(158, 27);
+            this.cbPhanLoaiChiTiet.Size = new System.Drawing.Size(168, 27);
             this.cbPhanLoaiChiTiet.TabIndex = 10;
             // 
             // cbDanhMucChiTiet
@@ -302,7 +303,7 @@
             this.cbDanhMucChiTiet.FormattingEnabled = true;
             this.cbDanhMucChiTiet.Location = new System.Drawing.Point(140, 125);
             this.cbDanhMucChiTiet.Name = "cbDanhMucChiTiet";
-            this.cbDanhMucChiTiet.Size = new System.Drawing.Size(158, 27);
+            this.cbDanhMucChiTiet.Size = new System.Drawing.Size(168, 27);
             this.cbDanhMucChiTiet.TabIndex = 9;
             // 
             // tbGhiChu
@@ -315,7 +316,7 @@
             this.tbGhiChu.Location = new System.Drawing.Point(140, 530);
             this.tbGhiChu.Name = "tbGhiChu";
             this.tbGhiChu.ReadOnly = true;
-            this.tbGhiChu.Size = new System.Drawing.Size(158, 27);
+            this.tbGhiChu.Size = new System.Drawing.Size(168, 27);
             this.tbGhiChu.TabIndex = 18;
             // 
             // tbSoLuongCon
@@ -328,7 +329,7 @@
             this.tbSoLuongCon.Location = new System.Drawing.Point(140, 485);
             this.tbSoLuongCon.Name = "tbSoLuongCon";
             this.tbSoLuongCon.ReadOnly = true;
-            this.tbSoLuongCon.Size = new System.Drawing.Size(158, 27);
+            this.tbSoLuongCon.Size = new System.Drawing.Size(168, 27);
             this.tbSoLuongCon.TabIndex = 17;
             // 
             // tbGiaBan
@@ -341,7 +342,7 @@
             this.tbGiaBan.Location = new System.Drawing.Point(140, 440);
             this.tbGiaBan.Name = "tbGiaBan";
             this.tbGiaBan.ReadOnly = true;
-            this.tbGiaBan.Size = new System.Drawing.Size(158, 27);
+            this.tbGiaBan.Size = new System.Drawing.Size(168, 27);
             this.tbGiaBan.TabIndex = 16;
             // 
             // tbGiaNhap
@@ -354,7 +355,7 @@
             this.tbGiaNhap.Location = new System.Drawing.Point(140, 395);
             this.tbGiaNhap.Name = "tbGiaNhap";
             this.tbGiaNhap.ReadOnly = true;
-            this.tbGiaNhap.Size = new System.Drawing.Size(158, 27);
+            this.tbGiaNhap.Size = new System.Drawing.Size(168, 27);
             this.tbGiaNhap.TabIndex = 15;
             // 
             // tbDonViTinh
@@ -367,7 +368,7 @@
             this.tbDonViTinh.Location = new System.Drawing.Point(140, 260);
             this.tbDonViTinh.Name = "tbDonViTinh";
             this.tbDonViTinh.ReadOnly = true;
-            this.tbDonViTinh.Size = new System.Drawing.Size(158, 27);
+            this.tbDonViTinh.Size = new System.Drawing.Size(168, 27);
             this.tbDonViTinh.TabIndex = 12;
             // 
             // tbTenSP
@@ -380,7 +381,7 @@
             this.tbTenSP.Location = new System.Drawing.Point(140, 80);
             this.tbTenSP.Name = "tbTenSP";
             this.tbTenSP.ReadOnly = true;
-            this.tbTenSP.Size = new System.Drawing.Size(158, 27);
+            this.tbTenSP.Size = new System.Drawing.Size(168, 27);
             this.tbTenSP.TabIndex = 8;
             // 
             // tbMaSP
@@ -393,7 +394,7 @@
             this.tbMaSP.Location = new System.Drawing.Point(140, 35);
             this.tbMaSP.Name = "tbMaSP";
             this.tbMaSP.ReadOnly = true;
-            this.tbMaSP.Size = new System.Drawing.Size(158, 27);
+            this.tbMaSP.Size = new System.Drawing.Size(168, 27);
             this.tbMaSP.TabIndex = 7;
             // 
             // btHuySP
@@ -401,7 +402,7 @@
             this.btHuySP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btHuySP.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btHuySP.Font = new System.Drawing.Font("Arial", 10.4F);
-            this.btHuySP.Location = new System.Drawing.Point(149, 621);
+            this.btHuySP.Location = new System.Drawing.Point(162, 621);
             this.btHuySP.Name = "btHuySP";
             this.btHuySP.Size = new System.Drawing.Size(59, 28);
             this.btHuySP.TabIndex = 22;
@@ -413,7 +414,7 @@
             this.btLuuSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btLuuSP.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btLuuSP.Font = new System.Drawing.Font("Arial", 10.4F);
-            this.btLuuSP.Location = new System.Drawing.Point(214, 621);
+            this.btLuuSP.Location = new System.Drawing.Point(227, 621);
             this.btLuuSP.Name = "btLuuSP";
             this.btLuuSP.Size = new System.Drawing.Size(81, 28);
             this.btLuuSP.TabIndex = 23;
@@ -425,7 +426,7 @@
             this.btThemSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btThemSP.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btThemSP.Font = new System.Drawing.Font("Arial", 10.4F);
-            this.btThemSP.Location = new System.Drawing.Point(52, 587);
+            this.btThemSP.Location = new System.Drawing.Point(65, 587);
             this.btThemSP.Name = "btThemSP";
             this.btThemSP.Size = new System.Drawing.Size(113, 28);
             this.btThemSP.TabIndex = 19;
@@ -548,7 +549,7 @@
             this.btXoaSp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btXoaSp.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btXoaSp.Font = new System.Drawing.Font("Arial", 10.4F);
-            this.btXoaSp.Location = new System.Drawing.Point(236, 587);
+            this.btXoaSp.Location = new System.Drawing.Point(249, 587);
             this.btXoaSp.Name = "btXoaSp";
             this.btXoaSp.Size = new System.Drawing.Size(59, 28);
             this.btXoaSp.TabIndex = 21;
@@ -560,7 +561,7 @@
             this.btSuaSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btSuaSP.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btSuaSP.Font = new System.Drawing.Font("Arial", 10.4F);
-            this.btSuaSP.Location = new System.Drawing.Point(171, 587);
+            this.btSuaSP.Location = new System.Drawing.Point(184, 587);
             this.btSuaSP.Name = "btSuaSP";
             this.btSuaSP.Size = new System.Drawing.Size(59, 28);
             this.btSuaSP.TabIndex = 20;
@@ -609,15 +610,17 @@
             // 
             // btTimKiem
             // 
+            this.btTimKiem.BackColor = System.Drawing.Color.White;
             this.btTimKiem.Location = new System.Drawing.Point(366, 15);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(47, 29);
             this.btTimKiem.TabIndex = 5;
             this.btTimKiem.Text = "🔍";
-            this.btTimKiem.UseVisualStyleBackColor = true;
+            this.btTimKiem.UseVisualStyleBackColor = false;
             // 
             // tbTimKiem
             // 
+            this.tbTimKiem.BackColor = System.Drawing.Color.White;
             this.tbTimKiem.ForeColor = System.Drawing.SystemColors.GrayText;
             this.tbTimKiem.Location = new System.Drawing.Point(4, 15);
             this.tbTimKiem.Name = "tbTimKiem";
@@ -661,23 +664,25 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.dataGridView2);
+            this.panel2.Controls.Add(this.dgvDanhMuc);
             this.panel2.Location = new System.Drawing.Point(7, 156);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1181, 576);
             this.panel2.TabIndex = 26;
             // 
-            // dataGridView2
+            // dgvDanhMuc
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1181, 576);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvDanhMuc.AllowUserToAddRows = false;
+            this.dgvDanhMuc.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvDanhMuc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhMuc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDanhMuc.Location = new System.Drawing.Point(0, 0);
+            this.dgvDanhMuc.Name = "dgvDanhMuc";
+            this.dgvDanhMuc.ReadOnly = true;
+            this.dgvDanhMuc.RowHeadersWidth = 51;
+            this.dgvDanhMuc.RowTemplate.Height = 24;
+            this.dgvDanhMuc.Size = new System.Drawing.Size(1181, 576);
+            this.dgvDanhMuc.TabIndex = 0;
             // 
             // btHuyDanhMuc
             // 
@@ -779,7 +784,7 @@
             // tpPhanLoai
             // 
             this.tpPhanLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(228)))), ((int)(((byte)(235)))));
-            this.tpPhanLoai.Controls.Add(this.cbDanhMucPhanLoai);
+            this.tpPhanLoai.Controls.Add(this.cbDanhMucPL);
             this.tpPhanLoai.Controls.Add(this.label16);
             this.tpPhanLoai.Controls.Add(this.panel3);
             this.tpPhanLoai.Controls.Add(this.btHuyPhanLoai);
@@ -798,17 +803,17 @@
             this.tpPhanLoai.TabIndex = 2;
             this.tpPhanLoai.Text = "Phân loại";
             // 
-            // cbDanhMucPhanLoai
+            // cbDanhMucPL
             // 
-            this.cbDanhMucPhanLoai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.cbDanhMucPL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbDanhMucPhanLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDanhMucPhanLoai.Enabled = false;
-            this.cbDanhMucPhanLoai.FormattingEnabled = true;
-            this.cbDanhMucPhanLoai.Location = new System.Drawing.Point(108, 108);
-            this.cbDanhMucPhanLoai.Name = "cbDanhMucPhanLoai";
-            this.cbDanhMucPhanLoai.Size = new System.Drawing.Size(511, 27);
-            this.cbDanhMucPhanLoai.TabIndex = 3;
+            this.cbDanhMucPL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDanhMucPL.Enabled = false;
+            this.cbDanhMucPL.FormattingEnabled = true;
+            this.cbDanhMucPL.Location = new System.Drawing.Point(108, 108);
+            this.cbDanhMucPL.Name = "cbDanhMucPL";
+            this.cbDanhMucPL.Size = new System.Drawing.Size(511, 27);
+            this.cbDanhMucPL.TabIndex = 3;
             // 
             // label16
             // 
@@ -824,23 +829,25 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.dataGridView3);
+            this.panel3.Controls.Add(this.dgvPhanLoai);
             this.panel3.Location = new System.Drawing.Point(6, 179);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1182, 553);
             this.panel3.TabIndex = 36;
             // 
-            // dataGridView3
+            // dgvPhanLoai
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1182, 553);
-            this.dataGridView3.TabIndex = 0;
+            this.dgvPhanLoai.AllowUserToAddRows = false;
+            this.dgvPhanLoai.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvPhanLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhanLoai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPhanLoai.Location = new System.Drawing.Point(0, 0);
+            this.dgvPhanLoai.Name = "dgvPhanLoai";
+            this.dgvPhanLoai.ReadOnly = true;
+            this.dgvPhanLoai.RowHeadersWidth = 51;
+            this.dgvPhanLoai.RowTemplate.Height = 24;
+            this.dgvPhanLoai.Size = new System.Drawing.Size(1182, 553);
+            this.dgvPhanLoai.TabIndex = 0;
             // 
             // btHuyPhanLoai
             // 
@@ -987,23 +994,26 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.dataGridView4);
+            this.panel4.Controls.Add(this.dgvDoiTac);
             this.panel4.Location = new System.Drawing.Point(6, 178);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1182, 554);
             this.panel4.TabIndex = 48;
             // 
-            // dataGridView4
+            // dgvDoiTac
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(1182, 554);
-            this.dataGridView4.TabIndex = 0;
+            this.dgvDoiTac.AllowUserToAddRows = false;
+            this.dgvDoiTac.AllowUserToDeleteRows = false;
+            this.dgvDoiTac.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvDoiTac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoiTac.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDoiTac.Location = new System.Drawing.Point(0, 0);
+            this.dgvDoiTac.Name = "dgvDoiTac";
+            this.dgvDoiTac.ReadOnly = true;
+            this.dgvDoiTac.RowHeadersWidth = 51;
+            this.dgvDoiTac.RowTemplate.Height = 24;
+            this.dgvDoiTac.Size = new System.Drawing.Size(1182, 554);
+            this.dgvDoiTac.TabIndex = 0;
             // 
             // btHuyDoiTac
             // 
@@ -1119,23 +1129,23 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDsSP)).EndInit();
-            this.grbDetail.ResumeLayout(false);
-            this.grbDetail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDsSPKho)).EndInit();
+            this.grbChiTietSP.ResumeLayout(false);
+            this.grbChiTietSP.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tpDanhMuc.ResumeLayout(false);
             this.tpDanhMuc.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhMuc)).EndInit();
             this.tpPhanLoai.ResumeLayout(false);
             this.tpPhanLoai.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhanLoai)).EndInit();
             this.tpDoiTac.ResumeLayout(false);
             this.tpDoiTac.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoiTac)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1146,10 +1156,10 @@
         private System.Windows.Forms.TabPage tpDanhMuc;
         private System.Windows.Forms.TabPage tpSanPham;
         private System.Windows.Forms.ComboBox cbPhanLoai;
-        private System.Windows.Forms.GroupBox grbDetail;
+        private System.Windows.Forms.GroupBox grbChiTietSP;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cbDanhMuc;
-        private System.Windows.Forms.DataGridView dgvDsSP;
+        private System.Windows.Forms.DataGridView dgvDsSPKho;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Button btTimKiem;
@@ -1173,7 +1183,7 @@
         private System.Windows.Forms.TabPage tpPhanLoai;
         private System.Windows.Forms.TabPage tpDoiTac;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvDanhMuc;
         private System.Windows.Forms.Button btHuyDanhMuc;
         private System.Windows.Forms.Button btLuuDanhMuc;
         private System.Windows.Forms.Button btThemDanhMuc;
@@ -1185,7 +1195,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvPhanLoai;
         private System.Windows.Forms.Button btHuyPhanLoai;
         private System.Windows.Forms.Button btLuuPhanLoai;
         private System.Windows.Forms.Button btThemPhanLoai;
@@ -1195,10 +1205,10 @@
         private System.Windows.Forms.TextBox tbMaPhanLoai;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cbDanhMucPhanLoai;
+        private System.Windows.Forms.ComboBox cbDanhMucPL;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvDoiTac;
         private System.Windows.Forms.Button btHuyDoiTac;
         private System.Windows.Forms.Button btLuuDoiTac;
         private System.Windows.Forms.Button btThemDoiTac;
