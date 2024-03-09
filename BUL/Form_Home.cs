@@ -18,70 +18,28 @@ namespace QuanLyCHThuoc.BUL
             InitializeComponent();
         }
 
-        private void Ico_Menu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Ico_KhachHang_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-         
-        }
-
-        private void toolStripMenuItem16_Click(object sender, EventArgs e)
-        {
-
+            Form_QLKH f = new Form_QLKH();
+            f.Show();
         }
 
         private void Ico_BanHang_Click(object sender, EventArgs e)
         {
-   
-        }
-
-        private void txt_BH_Click(object sender, EventArgs e)
-        {
-
+            fBill f = new fBill();
+            f.Show();
         }
 
         private void Ico_SanPham_Click(object sender, EventArgs e)
         {
-
+            fMedicineWarehouse f = new fMedicineWarehouse();
+            f.Show();
         }
 
-        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        private void Ico_ThongKe_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void bánHàngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void sảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form_Home_Load(object sender, EventArgs e)
-        {
-
+            Form_TKBC f = new Form_TKBC();
+            f.Show();
         }
     }
 }

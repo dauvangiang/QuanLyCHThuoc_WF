@@ -30,10 +30,11 @@ namespace QuanLyCHThuoc.BUL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btXuatHoaDon = new System.Windows.Forms.Button();
             this.tbGiamGia = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,12 +48,6 @@ namespace QuanLyCHThuoc.BUL
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDsThuoc = new System.Windows.Forms.DataGridView();
-            this.clNameMedicine = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.clUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clQuanty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clIntoMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbNgayHoaDon = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.tbSdtKH = new System.Windows.Forms.TextBox();
@@ -62,7 +57,12 @@ namespace QuanLyCHThuoc.BUL
             this.tbSoHoaDon = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.clNameMedicine = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.clUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clQuanty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clIntoMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,6 +128,18 @@ namespace QuanLyCHThuoc.BUL
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thanh toán:";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.Location = new System.Drawing.Point(793, 133);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 37);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Hủy";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btXuatHoaDon
             // 
@@ -292,54 +304,6 @@ namespace QuanLyCHThuoc.BUL
             this.dgvDsThuoc.Size = new System.Drawing.Size(971, 260);
             this.dgvDsThuoc.TabIndex = 10;
             // 
-            // clNameMedicine
-            // 
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle22;
-            this.clNameMedicine.HeaderText = "Thuốc điều trị";
-            this.clNameMedicine.Items.AddRange(new object[] {
-            "Thuốc 1",
-            "Thuốc 2",
-            "Thuốc 3",
-            "Thuốc 1",
-            "Thuốc 2",
-            "Thuốc 3"});
-            this.clNameMedicine.MinimumWidth = 6;
-            this.clNameMedicine.Name = "clNameMedicine";
-            // 
-            // clUnit
-            // 
-            this.clUnit.HeaderText = "Đơn vị";
-            this.clUnit.MinimumWidth = 6;
-            this.clUnit.Name = "clUnit";
-            this.clUnit.ReadOnly = true;
-            // 
-            // clQuanty
-            // 
-            this.clQuanty.HeaderText = "S.Lượng";
-            this.clQuanty.MinimumWidth = 6;
-            this.clQuanty.Name = "clQuanty";
-            // 
-            // clPrice
-            // 
-            this.clPrice.HeaderText = "Đơn giá";
-            this.clPrice.MinimumWidth = 6;
-            this.clPrice.Name = "clPrice";
-            this.clPrice.ReadOnly = true;
-            // 
-            // clIntoMoney
-            // 
-            this.clIntoMoney.HeaderText = "Thành tiền";
-            this.clIntoMoney.MinimumWidth = 6;
-            this.clIntoMoney.Name = "clIntoMoney";
-            this.clIntoMoney.ReadOnly = true;
-            // 
-            // clNote
-            // 
-            this.clNote.HeaderText = "Ghi chú";
-            this.clNote.MinimumWidth = 6;
-            this.clNote.Name = "clNote";
-            // 
             // tbNgayHoaDon
             // 
             this.tbNgayHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -440,17 +404,54 @@ namespace QuanLyCHThuoc.BUL
             this.label1.TabIndex = 0;
             this.label1.Text = "Cửa hàng thuốc TG";
             // 
-            // button1
+            // clNameMedicine
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.Location = new System.Drawing.Point(793, 133);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(46, 37);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Hủy";
-            this.button1.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle1;
+            this.clNameMedicine.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.clNameMedicine.HeaderText = "Thuốc điều trị";
+            this.clNameMedicine.Items.AddRange(new object[] {
+            "Thuốc 1",
+            "Thuốc 2",
+            "Thuốc 3",
+            "Thuốc 1",
+            "Thuốc 2",
+            "Thuốc 3"});
+            this.clNameMedicine.MinimumWidth = 6;
+            this.clNameMedicine.Name = "clNameMedicine";
+            // 
+            // clUnit
+            // 
+            this.clUnit.HeaderText = "Đơn vị";
+            this.clUnit.MinimumWidth = 6;
+            this.clUnit.Name = "clUnit";
+            this.clUnit.ReadOnly = true;
+            // 
+            // clQuanty
+            // 
+            this.clQuanty.HeaderText = "S.Lượng";
+            this.clQuanty.MinimumWidth = 6;
+            this.clQuanty.Name = "clQuanty";
+            // 
+            // clPrice
+            // 
+            this.clPrice.HeaderText = "Đơn giá";
+            this.clPrice.MinimumWidth = 6;
+            this.clPrice.Name = "clPrice";
+            this.clPrice.ReadOnly = true;
+            // 
+            // clIntoMoney
+            // 
+            this.clIntoMoney.HeaderText = "Thành tiền";
+            this.clIntoMoney.MinimumWidth = 6;
+            this.clIntoMoney.Name = "clIntoMoney";
+            this.clIntoMoney.ReadOnly = true;
+            // 
+            // clNote
+            // 
+            this.clNote.HeaderText = "Ghi chú";
+            this.clNote.MinimumWidth = 6;
+            this.clNote.Name = "clNote";
             // 
             // fBill
             // 
@@ -497,17 +498,17 @@ namespace QuanLyCHThuoc.BUL
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private DataGridViewComboBoxColumn clNameMedicine;
-        private DataGridViewTextBoxColumn clUnit;
-        private DataGridViewTextBoxColumn clQuanty;
-        private DataGridViewTextBoxColumn clPrice;
-        private DataGridViewTextBoxColumn clIntoMoney;
-        private DataGridViewTextBoxColumn clNote;
         private TextBox tbDateTime;
         private TextBox tbNgayHoaDon;
         private Panel panel2;
         private GroupBox groupBox1;
         private Button btXuatHoaDon;
         private Button button1;
+        private DataGridViewComboBoxColumn clNameMedicine;
+        private DataGridViewTextBoxColumn clUnit;
+        private DataGridViewTextBoxColumn clQuanty;
+        private DataGridViewTextBoxColumn clPrice;
+        private DataGridViewTextBoxColumn clIntoMoney;
+        private DataGridViewTextBoxColumn clNote;
     }
 }

@@ -60,7 +60,7 @@
             this.Spl_1.Panel2.SuspendLayout();
             this.Spl_1.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // txt_THONGK
             // 
             this.txt_THONGK.AutoSize = true;
@@ -70,7 +70,6 @@
             this.txt_THONGK.Size = new System.Drawing.Size(82, 23);
             this.txt_THONGK.TabIndex = 1;
             this.txt_THONGK.Text = "Báo Cáo";
-            this.txt_THONGK.Click += new System.EventHandler(this.label4_Click);
             // 
             // Ico_ThongKe
             // 
@@ -85,6 +84,7 @@
             this.Ico_ThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ico_ThongKe.TabIndex = 0;
             this.Ico_ThongKe.TabStop = false;
+            this.Ico_ThongKe.Click += new System.EventHandler(this.Ico_ThongKe_Click);
             // 
             // Ico_BanHang
             // 
@@ -110,7 +110,6 @@
             this.txt_BH.Size = new System.Drawing.Size(93, 23);
             this.txt_BH.TabIndex = 1;
             this.txt_BH.Text = "Bán Hàng";
-            this.txt_BH.Click += new System.EventHandler(this.txt_BH_Click);
             // 
             // Ico_SanPham
             // 
@@ -309,7 +308,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            this.Load += new System.EventHandler(this.Form_Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Ico_ThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_BanHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_SanPham)).EndInit();
@@ -324,6 +322,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Spl_1)).EndInit();
             this.Spl_1.ResumeLayout(false);
             this.ResumeLayout(false);
+
         }
 
         #endregion
