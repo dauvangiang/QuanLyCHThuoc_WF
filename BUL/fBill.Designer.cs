@@ -30,7 +30,7 @@ namespace QuanLyCHThuoc.BUL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -71,7 +71,7 @@ namespace QuanLyCHThuoc.BUL
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(228)))), ((int)(((byte)(235)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.panel2);
@@ -306,8 +306,8 @@ namespace QuanLyCHThuoc.BUL
             // 
             // clNameMedicine
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle12;
             this.clNameMedicine.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.clNameMedicine.HeaderText = "Thuốc điều trị";
             this.clNameMedicine.Items.AddRange(new object[] {
@@ -457,7 +457,7 @@ namespace QuanLyCHThuoc.BUL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MintCream;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(895, 634);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 10.4F);

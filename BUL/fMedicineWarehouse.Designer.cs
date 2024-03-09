@@ -145,7 +145,7 @@
             // 
             // tpSanPham
             // 
-            this.tpSanPham.BackColor = System.Drawing.Color.White;
+            this.tpSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(228)))), ((int)(((byte)(235)))));
             this.tpSanPham.Controls.Add(this.splitContainer1);
             this.tpSanPham.Controls.Add(this.label31);
             this.tpSanPham.Controls.Add(this.label30);
@@ -638,7 +638,7 @@
             // 
             // tpDanhMuc
             // 
-            this.tpDanhMuc.BackColor = System.Drawing.Color.White;
+            this.tpDanhMuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(228)))), ((int)(((byte)(235)))));
             this.tpDanhMuc.Controls.Add(this.panel2);
             this.tpDanhMuc.Controls.Add(this.btHuyDanhMuc);
             this.tpDanhMuc.Controls.Add(this.btLuuDanhMuc);
@@ -652,7 +652,7 @@
             this.tpDanhMuc.Location = new System.Drawing.Point(4, 28);
             this.tpDanhMuc.Name = "tpDanhMuc";
             this.tpDanhMuc.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDanhMuc.Size = new System.Drawing.Size(1216, 729);
+            this.tpDanhMuc.Size = new System.Drawing.Size(1197, 745);
             this.tpDanhMuc.TabIndex = 1;
             this.tpDanhMuc.Text = "Danh mục";
             // 
@@ -664,7 +664,7 @@
             this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Location = new System.Drawing.Point(7, 156);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1200, 560);
+            this.panel2.Size = new System.Drawing.Size(1181, 576);
             this.panel2.TabIndex = 26;
             // 
             // dataGridView2
@@ -676,14 +676,14 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1200, 560);
+            this.dataGridView2.Size = new System.Drawing.Size(1181, 576);
             this.dataGridView2.TabIndex = 0;
             // 
             // btHuyDanhMuc
             // 
             this.btHuyDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btHuyDanhMuc.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btHuyDanhMuc.Location = new System.Drawing.Point(710, 66);
+            this.btHuyDanhMuc.Location = new System.Drawing.Point(691, 66);
             this.btHuyDanhMuc.Name = "btHuyDanhMuc";
             this.btHuyDanhMuc.Size = new System.Drawing.Size(59, 28);
             this.btHuyDanhMuc.TabIndex = 7;
@@ -694,7 +694,7 @@
             // 
             this.btLuuDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btLuuDanhMuc.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btLuuDanhMuc.Location = new System.Drawing.Point(775, 66);
+            this.btLuuDanhMuc.Location = new System.Drawing.Point(756, 66);
             this.btLuuDanhMuc.Name = "btLuuDanhMuc";
             this.btLuuDanhMuc.Size = new System.Drawing.Size(81, 28);
             this.btLuuDanhMuc.TabIndex = 8;
@@ -705,7 +705,7 @@
             // 
             this.btThemDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btThemDanhMuc.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btThemDanhMuc.Location = new System.Drawing.Point(710, 27);
+            this.btThemDanhMuc.Location = new System.Drawing.Point(691, 27);
             this.btThemDanhMuc.Name = "btThemDanhMuc";
             this.btThemDanhMuc.Size = new System.Drawing.Size(113, 28);
             this.btThemDanhMuc.TabIndex = 4;
@@ -716,7 +716,7 @@
             // 
             this.btXoaDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btXoaDanhMuc.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btXoaDanhMuc.Location = new System.Drawing.Point(894, 27);
+            this.btXoaDanhMuc.Location = new System.Drawing.Point(875, 27);
             this.btXoaDanhMuc.Name = "btXoaDanhMuc";
             this.btXoaDanhMuc.Size = new System.Drawing.Size(59, 28);
             this.btXoaDanhMuc.TabIndex = 6;
@@ -727,7 +727,7 @@
             // 
             this.btSuaDanhMuc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btSuaDanhMuc.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btSuaDanhMuc.Location = new System.Drawing.Point(829, 27);
+            this.btSuaDanhMuc.Location = new System.Drawing.Point(810, 27);
             this.btSuaDanhMuc.Name = "btSuaDanhMuc";
             this.btSuaDanhMuc.Size = new System.Drawing.Size(59, 28);
             this.btSuaDanhMuc.TabIndex = 5;
@@ -743,7 +743,7 @@
             this.tbTenDanhMuc.Location = new System.Drawing.Point(76, 63);
             this.tbTenDanhMuc.Name = "tbTenDanhMuc";
             this.tbTenDanhMuc.ReadOnly = true;
-            this.tbTenDanhMuc.Size = new System.Drawing.Size(530, 27);
+            this.tbTenDanhMuc.Size = new System.Drawing.Size(511, 27);
             this.tbTenDanhMuc.TabIndex = 3;
             // 
             // tbMaDanhMuc
@@ -755,7 +755,7 @@
             this.tbMaDanhMuc.Location = new System.Drawing.Point(76, 18);
             this.tbMaDanhMuc.Name = "tbMaDanhMuc";
             this.tbMaDanhMuc.ReadOnly = true;
-            this.tbMaDanhMuc.Size = new System.Drawing.Size(530, 27);
+            this.tbMaDanhMuc.Size = new System.Drawing.Size(511, 27);
             this.tbMaDanhMuc.TabIndex = 2;
             // 
             // label13
@@ -778,7 +778,7 @@
             // 
             // tpPhanLoai
             // 
-            this.tpPhanLoai.BackColor = System.Drawing.Color.White;
+            this.tpPhanLoai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(228)))), ((int)(((byte)(235)))));
             this.tpPhanLoai.Controls.Add(this.cbDanhMucPhanLoai);
             this.tpPhanLoai.Controls.Add(this.label16);
             this.tpPhanLoai.Controls.Add(this.panel3);
@@ -794,7 +794,7 @@
             this.tpPhanLoai.Location = new System.Drawing.Point(4, 28);
             this.tpPhanLoai.Name = "tpPhanLoai";
             this.tpPhanLoai.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPhanLoai.Size = new System.Drawing.Size(1216, 729);
+            this.tpPhanLoai.Size = new System.Drawing.Size(1197, 745);
             this.tpPhanLoai.TabIndex = 2;
             this.tpPhanLoai.Text = "Phân loại";
             // 
@@ -807,7 +807,7 @@
             this.cbDanhMucPhanLoai.FormattingEnabled = true;
             this.cbDanhMucPhanLoai.Location = new System.Drawing.Point(108, 108);
             this.cbDanhMucPhanLoai.Name = "cbDanhMucPhanLoai";
-            this.cbDanhMucPhanLoai.Size = new System.Drawing.Size(530, 27);
+            this.cbDanhMucPhanLoai.Size = new System.Drawing.Size(511, 27);
             this.cbDanhMucPhanLoai.TabIndex = 3;
             // 
             // label16
@@ -827,7 +827,7 @@
             this.panel3.Controls.Add(this.dataGridView3);
             this.panel3.Location = new System.Drawing.Point(6, 179);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1201, 537);
+            this.panel3.Size = new System.Drawing.Size(1182, 553);
             this.panel3.TabIndex = 36;
             // 
             // dataGridView3
@@ -839,14 +839,14 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1201, 537);
+            this.dataGridView3.Size = new System.Drawing.Size(1182, 553);
             this.dataGridView3.TabIndex = 0;
             // 
             // btHuyPhanLoai
             // 
             this.btHuyPhanLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btHuyPhanLoai.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btHuyPhanLoai.Location = new System.Drawing.Point(759, 104);
+            this.btHuyPhanLoai.Location = new System.Drawing.Point(740, 104);
             this.btHuyPhanLoai.Name = "btHuyPhanLoai";
             this.btHuyPhanLoai.Size = new System.Drawing.Size(59, 28);
             this.btHuyPhanLoai.TabIndex = 7;
@@ -857,7 +857,7 @@
             // 
             this.btLuuPhanLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btLuuPhanLoai.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btLuuPhanLoai.Location = new System.Drawing.Point(824, 104);
+            this.btLuuPhanLoai.Location = new System.Drawing.Point(805, 104);
             this.btLuuPhanLoai.Name = "btLuuPhanLoai";
             this.btLuuPhanLoai.Size = new System.Drawing.Size(81, 28);
             this.btLuuPhanLoai.TabIndex = 8;
@@ -868,7 +868,7 @@
             // 
             this.btThemPhanLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btThemPhanLoai.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btThemPhanLoai.Location = new System.Drawing.Point(759, 63);
+            this.btThemPhanLoai.Location = new System.Drawing.Point(740, 63);
             this.btThemPhanLoai.Name = "btThemPhanLoai";
             this.btThemPhanLoai.Size = new System.Drawing.Size(113, 28);
             this.btThemPhanLoai.TabIndex = 4;
@@ -879,7 +879,7 @@
             // 
             this.btXoaPhanLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btXoaPhanLoai.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btXoaPhanLoai.Location = new System.Drawing.Point(943, 61);
+            this.btXoaPhanLoai.Location = new System.Drawing.Point(924, 61);
             this.btXoaPhanLoai.Name = "btXoaPhanLoai";
             this.btXoaPhanLoai.Size = new System.Drawing.Size(59, 28);
             this.btXoaPhanLoai.TabIndex = 6;
@@ -890,7 +890,7 @@
             // 
             this.btSuaPhanLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btSuaPhanLoai.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btSuaPhanLoai.Location = new System.Drawing.Point(878, 63);
+            this.btSuaPhanLoai.Location = new System.Drawing.Point(859, 63);
             this.btSuaPhanLoai.Name = "btSuaPhanLoai";
             this.btSuaPhanLoai.Size = new System.Drawing.Size(59, 28);
             this.btSuaPhanLoai.TabIndex = 5;
@@ -906,7 +906,7 @@
             this.tbTenPhanLoai.Location = new System.Drawing.Point(108, 63);
             this.tbTenPhanLoai.Name = "tbTenPhanLoai";
             this.tbTenPhanLoai.ReadOnly = true;
-            this.tbTenPhanLoai.Size = new System.Drawing.Size(530, 27);
+            this.tbTenPhanLoai.Size = new System.Drawing.Size(511, 27);
             this.tbTenPhanLoai.TabIndex = 2;
             // 
             // tbMaPhanLoai
@@ -918,7 +918,7 @@
             this.tbMaPhanLoai.Location = new System.Drawing.Point(108, 18);
             this.tbMaPhanLoai.Name = "tbMaPhanLoai";
             this.tbMaPhanLoai.ReadOnly = true;
-            this.tbMaPhanLoai.Size = new System.Drawing.Size(530, 27);
+            this.tbMaPhanLoai.Size = new System.Drawing.Size(511, 27);
             this.tbMaPhanLoai.TabIndex = 1;
             // 
             // label14
@@ -941,7 +941,7 @@
             // 
             // tpDoiTac
             // 
-            this.tpDoiTac.BackColor = System.Drawing.Color.White;
+            this.tpDoiTac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(228)))), ((int)(((byte)(235)))));
             this.tpDoiTac.Controls.Add(this.tbSdtDoiTac);
             this.tpDoiTac.Controls.Add(this.label17);
             this.tpDoiTac.Controls.Add(this.panel4);
@@ -957,7 +957,7 @@
             this.tpDoiTac.Location = new System.Drawing.Point(4, 28);
             this.tpDoiTac.Name = "tpDoiTac";
             this.tpDoiTac.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDoiTac.Size = new System.Drawing.Size(1216, 729);
+            this.tpDoiTac.Size = new System.Drawing.Size(1197, 745);
             this.tpDoiTac.TabIndex = 3;
             this.tpDoiTac.Text = "Đơn vị đối tác";
             // 
@@ -970,7 +970,7 @@
             this.tbSdtDoiTac.Location = new System.Drawing.Point(132, 108);
             this.tbSdtDoiTac.Name = "tbSdtDoiTac";
             this.tbSdtDoiTac.ReadOnly = true;
-            this.tbSdtDoiTac.Size = new System.Drawing.Size(532, 27);
+            this.tbSdtDoiTac.Size = new System.Drawing.Size(513, 27);
             this.tbSdtDoiTac.TabIndex = 50;
             // 
             // label17
@@ -990,7 +990,7 @@
             this.panel4.Controls.Add(this.dataGridView4);
             this.panel4.Location = new System.Drawing.Point(6, 178);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1201, 538);
+            this.panel4.Size = new System.Drawing.Size(1182, 554);
             this.panel4.TabIndex = 48;
             // 
             // dataGridView4
@@ -1002,14 +1002,14 @@
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(1201, 538);
+            this.dataGridView4.Size = new System.Drawing.Size(1182, 554);
             this.dataGridView4.TabIndex = 0;
             // 
             // btHuyDoiTac
             // 
             this.btHuyDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btHuyDoiTac.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btHuyDoiTac.Location = new System.Drawing.Point(756, 106);
+            this.btHuyDoiTac.Location = new System.Drawing.Point(737, 106);
             this.btHuyDoiTac.Name = "btHuyDoiTac";
             this.btHuyDoiTac.Size = new System.Drawing.Size(59, 28);
             this.btHuyDoiTac.TabIndex = 47;
@@ -1020,7 +1020,7 @@
             // 
             this.btLuuDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btLuuDoiTac.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btLuuDoiTac.Location = new System.Drawing.Point(821, 104);
+            this.btLuuDoiTac.Location = new System.Drawing.Point(802, 104);
             this.btLuuDoiTac.Name = "btLuuDoiTac";
             this.btLuuDoiTac.Size = new System.Drawing.Size(81, 28);
             this.btLuuDoiTac.TabIndex = 46;
@@ -1031,7 +1031,7 @@
             // 
             this.btThemDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btThemDoiTac.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btThemDoiTac.Location = new System.Drawing.Point(756, 61);
+            this.btThemDoiTac.Location = new System.Drawing.Point(737, 61);
             this.btThemDoiTac.Name = "btThemDoiTac";
             this.btThemDoiTac.Size = new System.Drawing.Size(113, 28);
             this.btThemDoiTac.TabIndex = 45;
@@ -1042,7 +1042,7 @@
             // 
             this.btXoaDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btXoaDoiTac.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btXoaDoiTac.Location = new System.Drawing.Point(940, 61);
+            this.btXoaDoiTac.Location = new System.Drawing.Point(921, 61);
             this.btXoaDoiTac.Name = "btXoaDoiTac";
             this.btXoaDoiTac.Size = new System.Drawing.Size(59, 28);
             this.btXoaDoiTac.TabIndex = 44;
@@ -1053,7 +1053,7 @@
             // 
             this.btSuaDoiTac.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btSuaDoiTac.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btSuaDoiTac.Location = new System.Drawing.Point(875, 61);
+            this.btSuaDoiTac.Location = new System.Drawing.Point(856, 61);
             this.btSuaDoiTac.Name = "btSuaDoiTac";
             this.btSuaDoiTac.Size = new System.Drawing.Size(59, 28);
             this.btSuaDoiTac.TabIndex = 43;
@@ -1069,7 +1069,7 @@
             this.tbTenDoiTac.Location = new System.Drawing.Point(132, 63);
             this.tbTenDoiTac.Name = "tbTenDoiTac";
             this.tbTenDoiTac.ReadOnly = true;
-            this.tbTenDoiTac.Size = new System.Drawing.Size(532, 27);
+            this.tbTenDoiTac.Size = new System.Drawing.Size(513, 27);
             this.tbTenDoiTac.TabIndex = 42;
             // 
             // tbMaDoiTac
@@ -1081,7 +1081,7 @@
             this.tbMaDoiTac.Location = new System.Drawing.Point(132, 18);
             this.tbMaDoiTac.Name = "tbMaDoiTac";
             this.tbMaDoiTac.ReadOnly = true;
-            this.tbMaDoiTac.Size = new System.Drawing.Size(532, 27);
+            this.tbMaDoiTac.Size = new System.Drawing.Size(513, 27);
             this.tbMaDoiTac.TabIndex = 41;
             // 
             // label18
