@@ -49,7 +49,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(945, 436);
+            this.dataGridView1.Size = new System.Drawing.Size(880, 471);
             this.dataGridView1.TabIndex = 0;
             // 
             // txt_Time
@@ -103,7 +103,7 @@
             // 
             this.but_Prin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.but_Prin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.but_Prin.Location = new System.Drawing.Point(861, 12);
+            this.but_Prin.Location = new System.Drawing.Point(796, 12);
             this.but_Prin.Name = "but_Prin";
             this.but_Prin.Size = new System.Drawing.Size(75, 53);
             this.but_Prin.TabIndex = 5;
@@ -115,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(969, 589);
+            this.ClientSize = new System.Drawing.Size(904, 624);
             this.Controls.Add(this.but_Prin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
