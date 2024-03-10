@@ -30,7 +30,7 @@ namespace QuanLyCHThuoc.BUL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btHuyHD = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -99,7 +99,7 @@ namespace QuanLyCHThuoc.BUL
             this.btHuyHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btHuyHD.BackColor = System.Drawing.Color.White;
             this.btHuyHD.ForeColor = System.Drawing.Color.Red;
-            this.btHuyHD.Location = new System.Drawing.Point(719, 575);
+            this.btHuyHD.Location = new System.Drawing.Point(804, 575);
             this.btHuyHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btHuyHD.Name = "btHuyHD";
             this.btHuyHD.Size = new System.Drawing.Size(79, 37);
@@ -122,7 +122,7 @@ namespace QuanLyCHThuoc.BUL
             // 
             this.btXuatHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btXuatHD.BackColor = System.Drawing.Color.White;
-            this.btXuatHD.Location = new System.Drawing.Point(804, 575);
+            this.btXuatHD.Location = new System.Drawing.Point(719, 575);
             this.btXuatHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btXuatHD.Name = "btXuatHD";
             this.btXuatHD.Size = new System.Drawing.Size(79, 37);
@@ -282,7 +282,7 @@ namespace QuanLyCHThuoc.BUL
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(874, 218);
-            this.panel2.TabIndex = 27;
+            this.panel2.TabIndex = 10;
             // 
             // dgvDsSPHD
             // 
@@ -307,8 +307,8 @@ namespace QuanLyCHThuoc.BUL
             // 
             // clNameMedicine
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle2;
             this.clNameMedicine.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.clNameMedicine.HeaderText = "Thuốc điều trị";
             this.clNameMedicine.Items.AddRange(new object[] {

@@ -186,6 +186,7 @@
             this.dgvDsSPKho.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDsSPKho.Location = new System.Drawing.Point(0, 0);
             this.dgvDsSPKho.Name = "dgvDsSPKho";
+            this.dgvDsSPKho.ReadOnly = true;
             this.dgvDsSPKho.RowHeadersWidth = 51;
             this.dgvDsSPKho.RowTemplate.Height = 24;
             this.dgvDsSPKho.Size = new System.Drawing.Size(568, 671);
@@ -665,9 +666,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.dgvDanhMuc);
-            this.panel2.Location = new System.Drawing.Point(7, 156);
+            this.panel2.Location = new System.Drawing.Point(10, 131);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1181, 576);
+            this.panel2.Size = new System.Drawing.Size(1178, 601);
             this.panel2.TabIndex = 26;
             // 
             // dgvDanhMuc
@@ -681,7 +682,7 @@
             this.dgvDanhMuc.ReadOnly = true;
             this.dgvDanhMuc.RowHeadersWidth = 51;
             this.dgvDanhMuc.RowTemplate.Height = 24;
-            this.dgvDanhMuc.Size = new System.Drawing.Size(1181, 576);
+            this.dgvDanhMuc.Size = new System.Drawing.Size(1178, 601);
             this.dgvDanhMuc.TabIndex = 0;
             // 
             // btHuyDanhMuc
@@ -830,9 +831,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.dgvPhanLoai);
-            this.panel3.Location = new System.Drawing.Point(6, 179);
+            this.panel3.Location = new System.Drawing.Point(10, 179);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1182, 553);
+            this.panel3.Size = new System.Drawing.Size(1178, 553);
             this.panel3.TabIndex = 36;
             // 
             // dgvPhanLoai
@@ -846,7 +847,7 @@
             this.dgvPhanLoai.ReadOnly = true;
             this.dgvPhanLoai.RowHeadersWidth = 51;
             this.dgvPhanLoai.RowTemplate.Height = 24;
-            this.dgvPhanLoai.Size = new System.Drawing.Size(1182, 553);
+            this.dgvPhanLoai.Size = new System.Drawing.Size(1178, 553);
             this.dgvPhanLoai.TabIndex = 0;
             // 
             // btHuyPhanLoai
@@ -995,9 +996,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.dgvDoiTac);
-            this.panel4.Location = new System.Drawing.Point(6, 178);
+            this.panel4.Location = new System.Drawing.Point(10, 178);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1182, 554);
+            this.panel4.Size = new System.Drawing.Size(1178, 554);
             this.panel4.TabIndex = 48;
             // 
             // dgvDoiTac
@@ -1012,7 +1013,7 @@
             this.dgvDoiTac.ReadOnly = true;
             this.dgvDoiTac.RowHeadersWidth = 51;
             this.dgvDoiTac.RowTemplate.Height = 24;
-            this.dgvDoiTac.Size = new System.Drawing.Size(1182, 554);
+            this.dgvDoiTac.Size = new System.Drawing.Size(1178, 554);
             this.dgvDoiTac.TabIndex = 0;
             // 
             // btHuyDoiTac

@@ -44,6 +44,7 @@
             this.txt_Ma = new System.Windows.Forms.Label();
             this.txt_Name = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbSapXep = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,6 +66,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(228)))), ((int)(((byte)(235)))));
+            this.splitContainer1.Panel1.Controls.Add(this.cbSapXep);
             this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel1.Controls.Add(this.textBox1);
             this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
@@ -107,7 +109,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(87, 20);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 27);
+            this.textBox1.Size = new System.Drawing.Size(194, 27);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -131,21 +133,22 @@
             this.txt_TK.AutoSize = true;
             this.txt_TK.Location = new System.Drawing.Point(7, 23);
             this.txt_TK.Name = "txt_TK";
-            this.txt_TK.Size = new System.Drawing.Size(78, 19);
+            this.txt_TK.Size = new System.Drawing.Size(80, 19);
             this.txt_TK.TabIndex = 1;
-            this.txt_TK.Text = "Tìm Kiếm";
+            this.txt_TK.Text = "Tìm kiếm:";
             // 
             // txt_SS
             // 
             this.txt_SS.AutoSize = true;
-            this.txt_SS.Location = new System.Drawing.Point(345, 23);
+            this.txt_SS.Location = new System.Drawing.Point(304, 23);
             this.txt_SS.Name = "txt_SS";
-            this.txt_SS.Size = new System.Drawing.Size(72, 19);
+            this.txt_SS.Size = new System.Drawing.Size(73, 19);
             this.txt_SS.TabIndex = 1;
-            this.txt_SS.Text = "Sắp Xếp";
+            this.txt_SS.Text = "Sắp xếp:";
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button4.Location = new System.Drawing.Point(130, 553);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(68, 36);
@@ -155,6 +158,7 @@
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Location = new System.Drawing.Point(204, 553);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(68, 36);
@@ -164,6 +168,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(278, 553);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 36);
@@ -173,13 +178,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 227);
+            this.groupBox1.Location = new System.Drawing.Point(3, 222);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(346, 305);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Lịch Sử Mua Hàng";
+            this.groupBox1.Text = "Lịch sử mua hàng:";
             // 
             // dataGridView2
             // 
@@ -198,9 +206,9 @@
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(130, 183);
+            this.textBox3.Location = new System.Drawing.Point(126, 168);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(93, 27);
+            this.textBox3.Size = new System.Drawing.Size(220, 27);
             this.textBox3.TabIndex = 1;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -209,41 +217,49 @@
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(129, 137);
+            this.textBox2.Location = new System.Drawing.Point(126, 122);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(94, 27);
+            this.textBox2.Size = new System.Drawing.Size(220, 27);
             this.textBox2.TabIndex = 1;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txt_Ma
             // 
             this.txt_Ma.AutoSize = true;
-            this.txt_Ma.Location = new System.Drawing.Point(12, 186);
+            this.txt_Ma.Location = new System.Drawing.Point(12, 171);
             this.txt_Ma.Name = "txt_Ma";
-            this.txt_Ma.Size = new System.Drawing.Size(118, 19);
+            this.txt_Ma.Size = new System.Drawing.Size(111, 19);
             this.txt_Ma.TabIndex = 1;
-            this.txt_Ma.Text = "Số Điện Thoại:";
+            this.txt_Ma.Text = "Số điện thoại:";
             // 
             // txt_Name
             // 
             this.txt_Name.AutoSize = true;
-            this.txt_Name.Location = new System.Drawing.Point(12, 140);
+            this.txt_Name.Location = new System.Drawing.Point(12, 125);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(87, 19);
+            this.txt_Name.Size = new System.Drawing.Size(61, 19);
             this.txt_Name.TabIndex = 1;
-            this.txt_Name.Text = "Họ và Tên:";
+            this.txt_Name.Text = "Họ tên:";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::QuanLyCHThuoc.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(129, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(142, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(94, 73);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // cbSapXep
+            // 
+            this.cbSapXep.FormattingEnabled = true;
+            this.cbSapXep.Location = new System.Drawing.Point(382, 20);
+            this.cbSapXep.Name = "cbSapXep";
+            this.cbSapXep.Size = new System.Drawing.Size(152, 27);
+            this.cbSapXep.TabIndex = 3;
             // 
             // Form_QLKH
             // 
@@ -256,7 +272,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_QLKH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản Lý Khách Hàng";
+            this.Text = "Quản lý khách hàng";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -289,5 +305,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox cbSapXep;
     }
 }
