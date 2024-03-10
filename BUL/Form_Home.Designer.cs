@@ -60,7 +60,7 @@
             this.Spl_1.Panel2.SuspendLayout();
             this.Spl_1.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // txt_THONGK
             // 
             this.txt_THONGK.AutoSize = true;
@@ -70,7 +70,6 @@
             this.txt_THONGK.Size = new System.Drawing.Size(82, 23);
             this.txt_THONGK.TabIndex = 1;
             this.txt_THONGK.Text = "Báo Cáo";
-            this.txt_THONGK.Click += new System.EventHandler(this.label4_Click);
             // 
             // Ico_ThongKe
             // 
@@ -85,6 +84,7 @@
             this.Ico_ThongKe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Ico_ThongKe.TabIndex = 0;
             this.Ico_ThongKe.TabStop = false;
+            this.Ico_ThongKe.Click += new System.EventHandler(this.Ico_ThongKe_Click);
             // 
             // Ico_BanHang
             // 
@@ -110,7 +110,6 @@
             this.txt_BH.Size = new System.Drawing.Size(93, 23);
             this.txt_BH.TabIndex = 1;
             this.txt_BH.Text = "Bán Hàng";
-            this.txt_BH.Click += new System.EventHandler(this.txt_BH_Click);
             // 
             // Ico_SanPham
             // 
@@ -164,7 +163,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -172,7 +171,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(581, 61);
+            this.menuStrip1.Size = new System.Drawing.Size(581, 59);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -259,6 +258,7 @@
             // Txt_NameCH
             // 
             this.Txt_NameCH.AutoSize = true;
+            this.Txt_NameCH.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Txt_NameCH.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Txt_NameCH.Location = new System.Drawing.Point(75, 16);
             this.Txt_NameCH.Name = "Txt_NameCH";
@@ -294,7 +294,7 @@
             this.Spl_1.Panel2.Controls.Add(this.Ico_ThongKe);
             this.Spl_1.Panel2.Controls.Add(this.Ico_BanHang);
             this.Spl_1.Size = new System.Drawing.Size(585, 463);
-            this.Spl_1.SplitterDistance = 65;
+            this.Spl_1.SplitterDistance = 63;
             this.Spl_1.TabIndex = 0;
             // 
             // Form_Home
@@ -302,14 +302,13 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(585, 463);
             this.Controls.Add(this.Spl_1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form_Home";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            this.Load += new System.EventHandler(this.Form_Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Ico_ThongKe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_BanHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ico_SanPham)).EndInit();
