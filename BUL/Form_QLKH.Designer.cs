@@ -237,7 +237,7 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::QuanLyCHThuoc.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(135, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(129, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(118, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

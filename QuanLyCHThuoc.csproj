@@ -151,5 +151,29 @@
   <ItemGroup>
     <None Include="Resources\user.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-to-cart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rating1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,9 +63,9 @@ namespace QuanLyCHThuoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap analytics {
+        internal static System.Drawing.Bitmap add_to_cart {
             get {
-                object obj = ResourceManager.GetObject("analytics", resourceCulture);
+                object obj = ResourceManager.GetObject("add-to-cart", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace QuanLyCHThuoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap analytics1 {
+        internal static System.Drawing.Bitmap add_to_cart1 {
             get {
-                object obj = ResourceManager.GetObject("analytics1", resourceCulture);
+                object obj = ResourceManager.GetObject("add-to-cart1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace QuanLyCHThuoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap grocery_cart {
+        internal static System.Drawing.Bitmap medicine2 {
             get {
-                object obj = ResourceManager.GetObject("grocery-cart", resourceCulture);
+                object obj = ResourceManager.GetObject("medicine2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace QuanLyCHThuoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap medicine {
+        internal static System.Drawing.Bitmap medicine3 {
             get {
-                object obj = ResourceManager.GetObject("medicine", resourceCulture);
+                object obj = ResourceManager.GetObject("medicine3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,19 @@ namespace QuanLyCHThuoc.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap supplier {
+        internal static System.Drawing.Bitmap report {
             get {
-                object obj = ResourceManager.GetObject("supplier", resourceCulture);
+                object obj = ResourceManager.GetObject("report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sign {
+            get {
+                object obj = ResourceManager.GetObject("sign", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
