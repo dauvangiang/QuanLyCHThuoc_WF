@@ -191,6 +191,7 @@
             this.dgvDsSPKho.RowTemplate.Height = 24;
             this.dgvDsSPKho.Size = new System.Drawing.Size(568, 671);
             this.dgvDsSPKho.TabIndex = 6;
+            this.dgvDsSPKho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsSPKho_CellClick);
             // 
             // grbChiTietSP
             // 
@@ -618,6 +619,7 @@
             this.btTimKiem.TabIndex = 5;
             this.btTimKiem.Text = "🔍";
             this.btTimKiem.UseVisualStyleBackColor = false;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // tbTimKiem
             // 

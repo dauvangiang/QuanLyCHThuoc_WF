@@ -152,7 +152,6 @@
             // 
             // Form_Home
             // 
-            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
@@ -161,7 +160,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_Home";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.Spl_1.Panel1.ResumeLayout(false);

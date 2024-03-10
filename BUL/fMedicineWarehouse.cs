@@ -39,8 +39,19 @@ namespace QuanLyCHThuoc.BUL
 
         private void btThemSP_Click(object sender, EventArgs e)
         {
-            btThemSP.Visible = btSuaSP.Visible = btXoaSp.Visible = false;
-            btLuuSP.Visible = btHuySP.Visible = true;
+            //Mở các đối tượng cho phép nhập/chọn thông tin
+            //Ẩn và hiển thị các button phù hợp
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            //Truy vấn dữ liệu từ database
+            //Trả kết quả tìm kiếm lên DataGridView dgvDsSPKho
+        }
+
+        private void dgvDsSPKho_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //Đẩy dữ liệu từ các ô trong hàng lên các đối tượng trong grbChiTietSP
         }
     }
 }
