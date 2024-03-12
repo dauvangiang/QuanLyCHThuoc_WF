@@ -30,7 +30,7 @@ namespace QuanLyCHThuoc.BUL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btHuyHD = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -106,6 +106,7 @@ namespace QuanLyCHThuoc.BUL
             this.btHuyHD.TabIndex = 22;
             this.btHuyHD.Text = "Hủy";
             this.btHuyHD.UseVisualStyleBackColor = false;
+            this.btHuyHD.Click += new System.EventHandler(this.btHuyHD_Click);
             // 
             // label3
             // 
@@ -129,6 +130,7 @@ namespace QuanLyCHThuoc.BUL
             this.btXuatHD.TabIndex = 16;
             this.btXuatHD.Text = "Xuất HD";
             this.btXuatHD.UseVisualStyleBackColor = false;
+            this.btXuatHD.Click += new System.EventHandler(this.btXuatHD_Click);
             // 
             // groupBox1
             // 
@@ -159,6 +161,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbGiamGia.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbGiamGia.BackColor = System.Drawing.SystemColors.Window;
             this.tbGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbGiamGia.Cursor = System.Windows.Forms.Cursors.No;
             this.tbGiamGia.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbGiamGia.Location = new System.Drawing.Point(325, 38);
             this.tbGiamGia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -183,6 +186,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbTraLai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbTraLai.BackColor = System.Drawing.SystemColors.Window;
             this.tbTraLai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbTraLai.Cursor = System.Windows.Forms.Cursors.No;
             this.tbTraLai.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTraLai.Location = new System.Drawing.Point(325, 75);
             this.tbTraLai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -196,6 +200,7 @@ namespace QuanLyCHThuoc.BUL
             // 
             this.tbTongTT.BackColor = System.Drawing.SystemColors.Window;
             this.tbTongTT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbTongTT.Cursor = System.Windows.Forms.Cursors.No;
             this.tbTongTT.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTongTT.Location = new System.Drawing.Point(114, 38);
             this.tbTongTT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -231,6 +236,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbPhaiTT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPhaiTT.BackColor = System.Drawing.SystemColors.Window;
             this.tbPhaiTT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbPhaiTT.Cursor = System.Windows.Forms.Cursors.No;
             this.tbPhaiTT.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPhaiTT.Location = new System.Drawing.Point(619, 38);
             this.tbPhaiTT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -307,8 +313,8 @@ namespace QuanLyCHThuoc.BUL
             // 
             // clNameMedicine
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle5;
             this.clNameMedicine.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.clNameMedicine.HeaderText = "Thuốc điều trị";
             this.clNameMedicine.Items.AddRange(new object[] {
@@ -359,6 +365,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbNgayMua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tbNgayMua.BackColor = System.Drawing.SystemColors.Window;
             this.tbNgayMua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbNgayMua.Cursor = System.Windows.Forms.Cursors.No;
             this.tbNgayMua.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNgayMua.Location = new System.Drawing.Point(594, 63);
             this.tbNgayMua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -425,6 +432,7 @@ namespace QuanLyCHThuoc.BUL
             // 
             this.tbSoHD.BackColor = System.Drawing.SystemColors.Window;
             this.tbSoHD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSoHD.Cursor = System.Windows.Forms.Cursors.No;
             this.tbSoHD.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSoHD.Location = new System.Drawing.Point(110, 63);
             this.tbSoHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

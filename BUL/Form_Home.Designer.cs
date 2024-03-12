@@ -158,7 +158,6 @@
             this.ClientSize = new System.Drawing.Size(736, 548);
             this.Controls.Add(this.Spl_1);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form_Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
