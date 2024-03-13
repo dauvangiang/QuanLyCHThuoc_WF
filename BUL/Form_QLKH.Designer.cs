@@ -84,8 +84,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.txt_Name);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(904, 619);
-            this.splitContainer1.SplitterDistance = 546;
+            this.splitContainer1.Size = new System.Drawing.Size(1108, 667);
+            this.splitContainer1.SplitterDistance = 669;
             this.splitContainer1.TabIndex = 0;
             this.splitContainer1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitContainer1_SplitterMoved);
             // 
@@ -127,7 +127,7 @@
             "Z→A"});
             this.comboBox1.Location = new System.Drawing.Point(423, 20);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(0, 24);
+            this.comboBox1.Size = new System.Drawing.Size(123, 27);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Tag = "";
             this.comboBox1.Text = "A→Z";
@@ -265,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(904, 619);
+            this.ClientSize = new System.Drawing.Size(1108, 667);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
