@@ -17,9 +17,10 @@ namespace QuanLyCHThuoc.BUL
         #region Biến toàn cục
         string query = null;
         Button prevButton = null;
-        DataTable dtDanhMuc = null, dtPhanLoai = null, dtNSX = null, dtSanPham = null;
-        //string sqlConn = null; //"Data Source = ...; Initial Catalog = ...; Integrated Security = True";
-        //SqlConnection conn = null;
+        SqlDataAdapter daSanPham = null, daDanhMuc = null, daPhanLoai = null, daNSX = null;
+        DataTable dtDanhMuc = null, dtPhanLoai = null, dtNSX = null, dtSanPham = null, dtDanhMucPL = null, dtDanhMucChiTiet = null, dtPhanLoaiChiTiet = null;
+        string sqlConnection = "Data Source = MSI\\SQLEXPRESS; Initial Catalog = QUANLYCUAHANGTHUOC; Integrated Security = True";
+        SqlConnection conn = null;
         #endregion
 
         public fMedicineWarehouse()
@@ -41,6 +42,7 @@ namespace QuanLyCHThuoc.BUL
 
         private void tbTimKiem_Leave(object sender, EventArgs e)
         {
+            panelTimKiem.Visible = lvTimKiem.Visible = false;
             if (this.tbTimKiem.Text == "")
             {
                 this.tbTimKiem.ForeColor = System.Drawing.SystemColors.GrayText;
@@ -90,7 +92,21 @@ namespace QuanLyCHThuoc.BUL
             }
             else
             {
-                //Xử lý với CSDL
+                query = "Delete from SanPham where MaSP = '" + this.tbMaSP.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    dtSanPham.Rows.Clear();
+                    daSanPham.Fill(dtSanPham);
+                    this.setNull(this.tpDanhMuc);
+                    this.btXoaSp.Enabled = btSuaSP.Enabled = false;
+                    this.btThemSP.Enabled = true;
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không thể xóa. Vui lòng thử lại sau!", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -118,18 +134,186 @@ namespace QuanLyCHThuoc.BUL
 
         private void btLuuSP_Click(object sender, EventArgs e)
         {
-            //Xử lý CSDL
-            dgvDsSPKho.Rows.Add(tbMaSP.Text, tbTenSP.Text, cbDanhMucChiTiet.Text, cbPhanLoaiChiTiet.Text, cbNhaSX.Text, tbDonViTinh.Text, dtpNSX.Value.Date.ToString(), dtpHSD.Value.Date.ToString(), tbGiaNhap.Text, tbGiaBan.Text, tbSoLuongCon.Text, tbGhiChu.Text);
-            MessageBox.Show("Saved!");
-            //Quay về giao diện trước khi thực hiện thêm hoặc xóa
-            this.controlsStatus(tp: this.tpSanPham, openOrClose: 0);
-            this.setNull(tpSanPham);
+            string ma = tbMaSP.Text, ten = tbTenSP.Text, pl = cbPhanLoaiChiTiet.SelectedValue.ToString(), nsx = cbNhaSX.SelectedValue.ToString(), dv = tbDonViTinh.Text;
+            string NSX = dtpNSX.Value.ToString(), HSD = dtpHSD.Value.ToString(), nhap = tbGiaNhap.Text, ban = tbGiaBan.Text, sl = tbSoLuongCon.Text, note = tbGhiChu.Text.Trim().Length != 0 ? tbGhiChu.Text.Trim() : null;
+            if (prevButton == null)
+            {
+                query = String.Format("Insert into SanPham values ('{0}', N'{1}', '{2}', '{3}', N'{4}', '{5}', '{6}', '{7}', '{8}', '{9}', N'{10}')", ma, ten, pl, nsx, dv, NSX, HSD, nhap, ban, sl, note);
+            }
+            else query = String.Format("Update SanPham set TenSP = N'{0}', MaPL = '{1}', MaNSX = '{2}', DonViTinh = N'{3}', NSX = '{4}', HSD = '{5}', GiaNhap = '{6}', GiaBan = '{7}', SoLuong = '{8}', GhiChu = N'{9}' where MaSP = '{10}'", ten, pl, nsx, dv, NSX, HSD, nhap, ban, sl, note, ma);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                dtSanPham.Rows.Clear();
+                daSanPham.Fill(dtSanPham);
+                this.controlsStatus(tp: this.tpSanPham, openOrClose: 0);
+                this.setNull(tpSanPham);
+            }
+            catch (SqlException)
+            {
+                string message = prevButton == null ? "Không thể thêm dữ liệu." : "Không thể chỉnh sửa dữ liệu.";
+                MessageBox.Show(message + " Vui lòng thử lại sau!", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)
         {
             //Truy vấn dữ liệu từ database
             //Trả kết quả tìm kiếm lên DataGridView dgvDsSPKho
+        }
+
+        private void btXoaDanhMuc_Click(object sender, EventArgs e)
+        {
+            var res = MessageBox.Show("Bạn có chắc chắn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                query = "Delete from DanhMuc where MaDM = '" + this.tbMaDanhMuc.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    dtDanhMuc.Rows.Clear(); dtDanhMucChiTiet.Rows.Clear(); dtDanhMucPL.Rows.Clear();
+                    daDanhMuc.Fill(dtDanhMuc); daDanhMuc.Fill(dtDanhMucChiTiet); daDanhMuc.Fill(dtDanhMucPL);
+                    this.setNull(this.tpDanhMuc);
+                    this.btXoaDanhMuc.Enabled = btSuaDanhMuc.Enabled = false;
+                    this.btThemDanhMuc.Enabled = true;
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không thể xóa. Vui lòng thử lại sau!", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btLuuDanhMuc_Click(object sender, EventArgs e)
+        {
+            string ma = tbMaDanhMuc.Text, ten = tbTenDanhMuc.Text;
+            if (prevButton == null)
+            {
+                query = String.Format("Insert into DanhMuc values ('{0}', N'{1}')", ma, ten);
+            }
+            else query = String.Format("Update DanhMuc set TenDM = N'{0}' where MaDM = '{1}'", ten, ma);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                dtDanhMuc.Rows.Clear(); dtDanhMucPL.Rows.Clear(); dtDanhMucChiTiet.Rows.Clear();
+                daDanhMuc.Fill(dtDanhMuc); daDanhMuc.Fill(dtDanhMucChiTiet); daDanhMuc.Fill(dtDanhMucPL);
+                this.controlsStatus(tp: this.tpDanhMuc, openOrClose: 0);
+                this.setNull(tpDanhMuc);
+            }
+            catch (SqlException)
+            {
+                string message = prevButton == null ? "Không thể thêm dữ liệu." : "Không thể chỉnh sửa dữ liệu.";
+                MessageBox.Show(message + " Vui lòng thử lại sau!", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btXoaPhanLoai_Click(object sender, EventArgs e)
+        {
+            var res = MessageBox.Show("Bạn có chắc chắn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                query = "Delete from PhanLoai where MaPL = '" + this.tbMaPhanLoai.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    dtPhanLoai.Rows.Clear(); dtPhanLoaiChiTiet.Rows.Clear();
+                    daPhanLoai.Fill(dtPhanLoai); daPhanLoai.Fill(dtPhanLoaiChiTiet);
+                    this.setNull(this.tpPhanLoai);
+                    this.btXoaPhanLoai.Enabled = btSuaPhanLoai.Enabled = false;
+                    this.btThemPhanLoai.Enabled = true;
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không thể xóa. Vui lòng thử lại sau!", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btLuuPhanLoai_Click(object sender, EventArgs e)
+        {
+            string ma = tbMaPhanLoai.Text, ten = tbTenPhanLoai.Text, dm = cbDanhMucPL.SelectedValue.ToString();
+            if (prevButton == null)
+            {
+                query = String.Format("Insert into PhanLoai values ('{0}', N'{1}', '{2}')", ma, ten, dm);
+            }
+            else query = String.Format("Update PhanLoai set TenPL = N'{0}', MaDM = '{1}' where MaPL = '{2}'", ten, dm, ma);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                dtPhanLoai.Rows.Clear(); dtPhanLoaiChiTiet.Rows.Clear();
+                daPhanLoai.Fill(dtPhanLoai); daPhanLoai.Fill(dtPhanLoaiChiTiet);
+                this.controlsStatus(tp: this.tpPhanLoai, openOrClose: 0);
+                this.setNull(tpPhanLoai);
+            }
+            catch (SqlException)
+            {
+                string message = prevButton == null ? "Không thể thêm dữ liệu." : "Không thể chỉnh sửa dữ liệu.";
+                MessageBox.Show(message + " Vui lòng thử lại sau!", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btXoaDoiTac_Click(object sender, EventArgs e)
+        {
+            var res = MessageBox.Show("Bạn có chắc chắn xóa?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.No)
+            {
+                return;
+            }
+            else
+            {
+                query = "Delete from NSX where MaNSX = '" + this.tbMaDoiTac.Text + "'";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    dtNSX.Rows.Clear();
+                    daNSX.Fill(dtNSX);
+                    this.setNull(this.tpDoiTac);
+                    this.btXoaDoiTac.Enabled = btSuaDoiTac.Enabled = false;
+                    this.btThemDoiTac.Enabled = true;
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không thể xóa. Vui lòng thử lại sau!", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btLuuDoiTac_Click(object sender, EventArgs e)
+        {
+            string ma = tbMaDoiTac.Text, ten = tbTenDoiTac.Text, sdt = tbSdtDoiTac.Text;
+            if (prevButton == null)
+            {
+                query = String.Format("Insert into NSX values ('{0}', N'{1}', '{2}')", ma, ten, sdt);
+            }
+            else query = String.Format("Update NSX set TenNSX = N'{0}', SDT = '{1}' where MaNSX = '{2}'", ten, sdt, ma);
+            SqlCommand cmd = new SqlCommand(query, conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                dtNSX.Rows.Clear();
+                daNSX.Fill(dtNSX);
+                this.controlsStatus(tp: this.tpDoiTac, openOrClose: 0);
+                this.setNull(tpDoiTac);
+            }
+            catch (SqlException)
+            {
+                string message = prevButton == null ? "Không thể thêm dữ liệu." : "Không thể chỉnh sửa dữ liệu.";
+                MessageBox.Show(message + " Vui lòng thử lại sau!", "Oops", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dgvDsSPKho_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -171,6 +355,28 @@ namespace QuanLyCHThuoc.BUL
             this.tbTenDanhMuc.Text = currRow.Cells[1].Value.ToString().Trim();
         }
 
+        private void tbTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string querySearch = null;
+            if (tbTimKiem.Text.Trim().Length != 0 && tbTimKiem.Text != "Tìm kiếm...")
+            {
+                panelTimKiem.Visible = lvTimKiem.Visible = true;
+                querySearch = "Select TenDM from DanhMuc where TenDm like N'" + tbTimKiem.Text.Trim() + "%'";
+                DataTable dtSearch = DataProvider.Instance.ExecuteQuery(querySearch);
+                lvTimKiem.Items.Clear();
+                //lvTimKiem.Items.Add(new ListViewItem("Vi du"));
+                foreach (DataRow row in dtSearch.Rows)
+                {
+                    lvTimKiem.Items.Add(new ListViewItem(row[0].ToString()));
+                }
+                lvTimKiem.Refresh();
+            }
+            else
+            {
+                panelTimKiem.Visible = lvTimKiem.Visible = false;
+            }
+        }
+
         private void dgvPhanLoai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1)
@@ -203,31 +409,41 @@ namespace QuanLyCHThuoc.BUL
 
         private void fMedicineWarehouse_Load(object sender, EventArgs e)
         {
+            conn = new SqlConnection(sqlConnection); conn.Open();
+
             //San pham
             query = "Select MaSP as [Mã số], TenSP as [Tên], TenDM as [Danh mục], TenPL as [Phân loại], TenNSX as [Sản phẩm của], DonViTinh as [Đơn vị], SP.NSX as [Ngày sản xuất], SP.HSD as [Hạn sử dụng], GiaNhap as [Giá nhập], GiaBan as [Giá bán], SoLuong as [Số lượng], GhiChu as [Ghi chú] " +
                 " From SanPham SP, DanhMuc DM, PhanLoai PL, NSX " +
                 " Where SP.MaPL = PL.MaPL and PL.MaDM = DM.MaDM and SP.MaNSX = NSX.MaNSX";
-            dtSanPham = DataProvider.Instance.ExecuteQuery(query);
-            dgvDsSPKho.DataSource = dtSanPham; dgvDsSPKho.Columns["Ngày sản xuất"].DefaultCellStyle.Format = dgvDsSPKho.Columns["Hạn sử dụng"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            daSanPham = new SqlDataAdapter(query, conn);
+            dtSanPham = new DataTable();
+            daSanPham.Fill(dtSanPham);
+            dgvDsSPKho.DataSource = dtSanPham;
+            dgvDsSPKho.Columns["Ngày sản xuất"].DefaultCellStyle.Format = dgvDsSPKho.Columns["Hạn sử dụng"].DefaultCellStyle.Format = "dd/MM/yyyy";
 
             //danh muc
             query = "Select MaDM as [Mã số], TenDM as [Tên] from DanhMuc";
-            dtDanhMuc = DataProvider.Instance.ExecuteQuery(query);
-            dgvDanhMuc.DataSource = dtDanhMuc;
-            cbDanhMucPL.DataSource = cbDanhMuc.DataSource = cbDanhMucChiTiet.DataSource = dtDanhMuc;
+            daDanhMuc = new SqlDataAdapter(query, conn);
+            dtDanhMuc = new DataTable(); dtDanhMucChiTiet = new DataTable(); dtDanhMucPL = new DataTable();
+            daDanhMuc.Fill(dtDanhMuc); daDanhMuc.Fill(dtDanhMucPL); daDanhMuc.Fill(dtDanhMucChiTiet);
+            dgvDanhMuc.DataSource = cbDanhMuc.DataSource = dtDanhMuc;
+            cbDanhMucPL.DataSource = dtDanhMucPL; cbDanhMucChiTiet.DataSource = dtDanhMucChiTiet;
             cbDanhMucPL.DisplayMember = cbDanhMuc.DisplayMember = cbDanhMucChiTiet.DisplayMember = "Tên";
             cbDanhMucPL.ValueMember = cbDanhMuc.ValueMember = cbDanhMucChiTiet.ValueMember = "Mã số";
 
             //Phan loai
             query = "Select MaPL as [Mã số], TenPL as [Tên], TenDM as [Danh mục] from PhanLoai, DanhMuc where PhanLoai.MaDM = DanhMuc.MaDM";
-            dtPhanLoai = DataProvider.Instance.ExecuteQuery(query);
-            dgvPhanLoai.DataSource = dtPhanLoai;
-            cbPhanLoai.DataSource = cbPhanLoaiChiTiet.DataSource = dtPhanLoai;
+            daPhanLoai = new SqlDataAdapter(query, conn);
+            dtPhanLoai = new DataTable(); dtPhanLoaiChiTiet = new DataTable();
+            daPhanLoai.Fill(dtPhanLoai); daPhanLoai.Fill(dtPhanLoaiChiTiet);
+            dgvPhanLoai.DataSource = cbPhanLoai.DataSource = dtPhanLoai;
+            cbPhanLoaiChiTiet.DataSource = dtPhanLoaiChiTiet;
             cbPhanLoai.DisplayMember = cbPhanLoaiChiTiet.DisplayMember = "Tên"; cbPhanLoai.ValueMember = cbPhanLoaiChiTiet.ValueMember = "Mã số";
 
             //NSX
             query = "Select MaNSX as [Mã số], TenNSX as [Tên], SDT as [Số điện thoại] from NSX";
-            dtNSX = DataProvider.Instance.ExecuteQuery(query);
+            daNSX = new SqlDataAdapter(query, conn);
+            dtNSX = new DataTable(); daNSX.Fill(dtNSX);
             dgvDoiTac.DataSource = dtNSX;
             cbNhaSX.DataSource = dtNSX;
             cbNhaSX.DisplayMember = "Tên"; cbNhaSX.ValueMember = "Mã số";
@@ -352,9 +568,24 @@ namespace QuanLyCHThuoc.BUL
             tb.BackColor = openOrClose == 1 ? Color.White : System.Drawing.SystemColors.Control;
         }
 
-
-
-
+        /*
+        private void FillFunction(SqlDataAdapter da, ref List<DataTable> dts)
+        {
+            if (da == null) return;
+            int n = dts.Count;
+            for (int i = 0; i < n; i++)
+            {
+                if (dts[i] == null) dts[i] = new DataTable();
+                else dts[i].Clear();
+                da.Fill(dts[i]);
+            }
+            //foreach (DataTable dt in dts)
+            //{
+            //    da.Fill(dt);
+            //}
+        }
+        */
+        
 
 
 

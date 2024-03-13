@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpSanPham = new System.Windows.Forms.TabPage();
+            this.panelTimKiem = new System.Windows.Forms.Panel();
+            this.lvTimKiem = new System.Windows.Forms.ListView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvDsSPKho = new System.Windows.Forms.DataGridView();
             this.grbChiTietSP = new System.Windows.Forms.GroupBox();
@@ -111,6 +113,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpSanPham.SuspendLayout();
+            this.panelTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -146,6 +149,7 @@
             // tpSanPham
             // 
             this.tpSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(228)))), ((int)(((byte)(235)))));
+            this.tpSanPham.Controls.Add(this.panelTimKiem);
             this.tpSanPham.Controls.Add(this.splitContainer1);
             this.tpSanPham.Controls.Add(this.label31);
             this.tpSanPham.Controls.Add(this.label30);
@@ -158,6 +162,29 @@
             this.tpSanPham.Size = new System.Drawing.Size(1197, 745);
             this.tpSanPham.TabIndex = 0;
             this.tpSanPham.Text = "Sản phẩm";
+            // 
+            // panelTimKiem
+            // 
+            this.panelTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panelTimKiem.Controls.Add(this.lvTimKiem);
+            this.panelTimKiem.Location = new System.Drawing.Point(775, 49);
+            this.panelTimKiem.Name = "panelTimKiem";
+            this.panelTimKiem.Size = new System.Drawing.Size(360, 237);
+            this.panelTimKiem.TabIndex = 11;
+            this.panelTimKiem.Visible = false;
+            // 
+            // lvTimKiem
+            // 
+            this.lvTimKiem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvTimKiem.HideSelection = false;
+            this.lvTimKiem.Location = new System.Drawing.Point(0, 0);
+            this.lvTimKiem.Name = "lvTimKiem";
+            this.lvTimKiem.Size = new System.Drawing.Size(360, 237);
+            this.lvTimKiem.TabIndex = 34;
+            this.lvTimKiem.UseCompatibleStateImageBehavior = false;
+            this.lvTimKiem.View = System.Windows.Forms.View.List;
+            this.lvTimKiem.Visible = false;
             // 
             // splitContainer1
             // 
@@ -626,15 +653,15 @@
             this.panel1.Controls.Add(this.btTimKiem);
             this.panel1.Controls.Add(this.tbTimKiem);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(774, 3);
+            this.panel1.Location = new System.Drawing.Point(774, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(420, 57);
+            this.panel1.Size = new System.Drawing.Size(420, 39);
             this.panel1.TabIndex = 4;
             // 
             // btTimKiem
             // 
             this.btTimKiem.BackColor = System.Drawing.Color.White;
-            this.btTimKiem.Location = new System.Drawing.Point(366, 15);
+            this.btTimKiem.Location = new System.Drawing.Point(363, 8);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.Size = new System.Drawing.Size(47, 29);
             this.btTimKiem.TabIndex = 5;
@@ -646,12 +673,13 @@
             // 
             this.tbTimKiem.BackColor = System.Drawing.Color.White;
             this.tbTimKiem.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbTimKiem.Location = new System.Drawing.Point(4, 15);
+            this.tbTimKiem.Location = new System.Drawing.Point(3, 9);
             this.tbTimKiem.Name = "tbTimKiem";
             this.tbTimKiem.Size = new System.Drawing.Size(364, 27);
             this.tbTimKiem.TabIndex = 4;
             this.tbTimKiem.Text = "Tìm kiếm...";
             this.tbTimKiem.Click += new System.EventHandler(this.tbTimKiem_Click);
+            this.tbTimKiem.TextChanged += new System.EventHandler(this.tbTimKiem_TextChanged);
             this.tbTimKiem.Leave += new System.EventHandler(this.tbTimKiem_Leave);
             // 
             // cbDanhMuc
@@ -735,6 +763,7 @@
             this.btLuuDanhMuc.Text = "Lưu lại";
             this.btLuuDanhMuc.UseVisualStyleBackColor = false;
             this.btLuuDanhMuc.Visible = false;
+            this.btLuuDanhMuc.Click += new System.EventHandler(this.btLuuDanhMuc_Click);
             // 
             // btThemDanhMuc
             // 
@@ -759,6 +788,7 @@
             this.btXoaDanhMuc.TabIndex = 6;
             this.btXoaDanhMuc.Text = "Xóa";
             this.btXoaDanhMuc.UseVisualStyleBackColor = false;
+            this.btXoaDanhMuc.Click += new System.EventHandler(this.btXoaDanhMuc_Click);
             // 
             // btSuaDanhMuc
             // 
@@ -912,6 +942,7 @@
             this.btLuuPhanLoai.Text = "Lưu lại";
             this.btLuuPhanLoai.UseVisualStyleBackColor = false;
             this.btLuuPhanLoai.Visible = false;
+            this.btLuuPhanLoai.Click += new System.EventHandler(this.btLuuPhanLoai_Click);
             // 
             // btThemPhanLoai
             // 
@@ -936,6 +967,7 @@
             this.btXoaPhanLoai.TabIndex = 6;
             this.btXoaPhanLoai.Text = "Xóa";
             this.btXoaPhanLoai.UseVisualStyleBackColor = false;
+            this.btXoaPhanLoai.Click += new System.EventHandler(this.btXoaPhanLoai_Click);
             // 
             // btSuaPhanLoai
             // 
@@ -1024,6 +1056,7 @@
             this.tbSdtDoiTac.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSdtDoiTac.Cursor = System.Windows.Forms.Cursors.No;
             this.tbSdtDoiTac.Location = new System.Drawing.Point(132, 108);
+            this.tbSdtDoiTac.MaxLength = 10;
             this.tbSdtDoiTac.Name = "tbSdtDoiTac";
             this.tbSdtDoiTac.ReadOnly = true;
             this.tbSdtDoiTac.Size = new System.Drawing.Size(513, 27);
@@ -1090,6 +1123,7 @@
             this.btLuuDoiTac.Text = "Lưu lại";
             this.btLuuDoiTac.UseVisualStyleBackColor = false;
             this.btLuuDoiTac.Visible = false;
+            this.btLuuDoiTac.Click += new System.EventHandler(this.btLuuDoiTac_Click);
             // 
             // btThemDoiTac
             // 
@@ -1114,6 +1148,7 @@
             this.btXoaDoiTac.TabIndex = 44;
             this.btXoaDoiTac.Text = "Xóa";
             this.btXoaDoiTac.UseVisualStyleBackColor = false;
+            this.btXoaDoiTac.Click += new System.EventHandler(this.btXoaDoiTac_Click);
             // 
             // btSuaDoiTac
             // 
@@ -1186,6 +1221,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tpSanPham.ResumeLayout(false);
             this.tpSanPham.PerformLayout();
+            this.panelTimKiem.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -1294,5 +1330,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox cbNhaSX;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ListView lvTimKiem;
+        private System.Windows.Forms.Panel panelTimKiem;
     }
 }

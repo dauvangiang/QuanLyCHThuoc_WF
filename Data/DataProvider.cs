@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,6 +34,19 @@ namespace QuanLyCHThuoc.Data
                 conn.Close();
             }
             return dt;
+        }
+
+        public int ExecuteNonQuery(string query)
+        {
+            int res = 0;
+            using (SqlConnection conn = new SqlConnection())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sqlConnection, conn);
+                res = cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            return res;
         }
     }
 }
