@@ -50,9 +50,9 @@
             this.Txt_NameCH.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.Txt_NameCH.Location = new System.Drawing.Point(75, 20);
             this.Txt_NameCH.Name = "Txt_NameCH";
-            this.Txt_NameCH.Size = new System.Drawing.Size(203, 27);
+            this.Txt_NameCH.Size = new System.Drawing.Size(191, 27);
             this.Txt_NameCH.TabIndex = 1;
-            this.Txt_NameCH.Text = "Cửa Hàng Thuốc TG";
+            this.Txt_NameCH.Text = "Cửa hàng thuốc TG";
             // 
             // Spl_1
             // 
@@ -92,76 +92,75 @@
             // 
             // button_KhachHang
             // 
-            this.button_KhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button_KhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.button_KhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_KhachHang.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_KhachHang.Font = new System.Drawing.Font("Arial", 10.4F, System.Drawing.FontStyle.Bold);
             this.button_KhachHang.Image = ((System.Drawing.Image)(resources.GetObject("button_KhachHang.Image")));
             this.button_KhachHang.Location = new System.Drawing.Point(492, 29);
             this.button_KhachHang.Name = "button_KhachHang";
             this.button_KhachHang.Size = new System.Drawing.Size(168, 169);
             this.button_KhachHang.TabIndex = 0;
-            this.button_KhachHang.Text = "Khách Hàng";
+            this.button_KhachHang.Text = "Khách hàng";
             this.button_KhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_KhachHang.UseVisualStyleBackColor = false;
             this.button_KhachHang.Click += new System.EventHandler(this.button_KhachHang_Click);
             // 
             // button_KhoThuoc
             // 
-            this.button_KhoThuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button_KhoThuoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.button_KhoThuoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_KhoThuoc.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_KhoThuoc.Font = new System.Drawing.Font("Arial", 10.4F, System.Drawing.FontStyle.Bold);
             this.button_KhoThuoc.Image = ((System.Drawing.Image)(resources.GetObject("button_KhoThuoc.Image")));
             this.button_KhoThuoc.Location = new System.Drawing.Point(271, 29);
             this.button_KhoThuoc.Name = "button_KhoThuoc";
             this.button_KhoThuoc.Size = new System.Drawing.Size(168, 169);
             this.button_KhoThuoc.TabIndex = 0;
-            this.button_KhoThuoc.Text = "Kho Thuốc";
+            this.button_KhoThuoc.Text = "Kho thuốc";
             this.button_KhoThuoc.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_KhoThuoc.UseVisualStyleBackColor = false;
             this.button_KhoThuoc.Click += new System.EventHandler(this.button_KhoThuoc_Click);
             // 
             // button_BaoCao
             // 
-            this.button_BaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button_BaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.button_BaoCao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_BaoCao.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button_BaoCao.Font = new System.Drawing.Font("Arial", 10.4F, System.Drawing.FontStyle.Bold);
             this.button_BaoCao.Image = global::QuanLyCHThuoc.Properties.Resources.report;
             this.button_BaoCao.Location = new System.Drawing.Point(43, 259);
             this.button_BaoCao.Name = "button_BaoCao";
             this.button_BaoCao.Size = new System.Drawing.Size(168, 169);
             this.button_BaoCao.TabIndex = 0;
-            this.button_BaoCao.Text = "Báo Cáo";
+            this.button_BaoCao.Text = "Báo cáo";
             this.button_BaoCao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_BaoCao.UseVisualStyleBackColor = false;
             this.button_BaoCao.Click += new System.EventHandler(this.button_BaoCao_Click);
             // 
             // button_BanHang
             // 
-            this.button_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button_BanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(238)))), ((int)(((byte)(245)))));
             this.button_BanHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_BanHang.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_BanHang.Font = new System.Drawing.Font("Arial", 10.4F, System.Drawing.FontStyle.Bold);
             this.button_BanHang.Image = global::QuanLyCHThuoc.Properties.Resources.add_to_cart1;
             this.button_BanHang.Location = new System.Drawing.Point(43, 29);
             this.button_BanHang.Name = "button_BanHang";
             this.button_BanHang.Size = new System.Drawing.Size(168, 169);
             this.button_BanHang.TabIndex = 0;
-            this.button_BanHang.Text = "Bán Hàng";
+            this.button_BanHang.Text = "Bán hàng";
             this.button_BanHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_BanHang.UseVisualStyleBackColor = false;
             this.button_BanHang.Click += new System.EventHandler(this.button_BanHang_Click);
             // 
             // Form_Home
             // 
-            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(736, 548);
             this.Controls.Add(this.Spl_1);
+            this.MaximizeBox = false;
             this.Name = "Form_Home";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Home";
+            this.Text = "Trang chủ";
             this.Spl_1.Panel1.ResumeLayout(false);
             this.Spl_1.Panel1.PerformLayout();
             this.Spl_1.Panel2.ResumeLayout(false);
