@@ -8,15 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Data.SqlClient;
 
 namespace QuanLyCHThuoc.BUL
 {
     public partial class Form_Home : Form
     {
+        
+
         public Form_Home()
         {
             InitializeComponent();
         }
+      
+  
 
         private void button_BanHang_Click(object sender, EventArgs e)
         {

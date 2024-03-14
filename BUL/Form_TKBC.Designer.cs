@@ -47,9 +47,10 @@
             this.dgvTKBC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTKBC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTKBC.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvTKBC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTKBC.Location = new System.Drawing.Point(11, 140);
+            this.dgvTKBC.Location = new System.Drawing.Point(12, 140);
             this.dgvTKBC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTKBC.Name = "dgvTKBC";
             this.dgvTKBC.ReadOnly = true;
@@ -116,6 +117,7 @@
             this.button_XacNhan.TabIndex = 4;
             this.button_XacNhan.Text = "Xác nhận";
             this.button_XacNhan.UseVisualStyleBackColor = false;
+            this.button_XacNhan.Click += new System.EventHandler(this.button_XacNhan_Click);
             // 
             // label3
             // 
@@ -131,6 +133,9 @@
             // 
             this.comboBox_NoiDung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_NoiDung.FormattingEnabled = true;
+            this.comboBox_NoiDung.Items.AddRange(new object[] {
+            "Thống Kê Doanh Thu",
+            "Thống Kê Hàng Tồn"});
             this.comboBox_NoiDung.Location = new System.Drawing.Point(100, 20);
             this.comboBox_NoiDung.Name = "comboBox_NoiDung";
             this.comboBox_NoiDung.Size = new System.Drawing.Size(458, 27);
@@ -156,6 +161,7 @@
             this.Name = "Form_TKBC";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thống kê báo cáo";
+            this.Load += new System.EventHandler(this.Form_TKBC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTKBC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
