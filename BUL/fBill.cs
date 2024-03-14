@@ -33,7 +33,22 @@ namespace QuanLyCHThuoc.BUL
 
         private void btXuatHD_Click(object sender, EventArgs e)
         {
-            //Lưu hóa đơn vào database
+            setCodeAndDateOfBill(date: tbNgayMua);
+            //Lưu thông tin KH vào bảng KhachHang
+
+            //Lưu thông tin hóa đơn vào bảng HoaDon
+
+            //Lưu thông tin chi tiết hóa đơn vào bảng ChiTietHD
+
+        }
+
+        //Hàm bổ trợ tạo số hóa đơn và ngày tự động
+        private void setCodeAndDateOfBill(TextBox code = null, TextBox date = null)
+        {
+            //Tạo số hóa đơn tự động
+            MessageBox.Show(DateTime.Now.ToString());
+            //Hiển thị ngày mua tự động
+            date.Text = DateTime.Now.ToString(" dd/MM/yyyy  HH:mm:ss");
         }
     }
 }

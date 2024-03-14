@@ -76,6 +76,7 @@
     <Compile Include="BUL\Form_TKBC.Designer.cs">
       <DependentUpon>Form_TKBC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\DataProvider.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BUL\fBill.resx">

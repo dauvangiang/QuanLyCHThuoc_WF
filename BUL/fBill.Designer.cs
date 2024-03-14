@@ -30,7 +30,7 @@ namespace QuanLyCHThuoc.BUL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btHuyHD = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -98,6 +98,7 @@ namespace QuanLyCHThuoc.BUL
             // 
             this.btHuyHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btHuyHD.BackColor = System.Drawing.Color.White;
+            this.btHuyHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHuyHD.ForeColor = System.Drawing.Color.Red;
             this.btHuyHD.Location = new System.Drawing.Point(804, 575);
             this.btHuyHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -123,6 +124,7 @@ namespace QuanLyCHThuoc.BUL
             // 
             this.btXuatHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btXuatHD.BackColor = System.Drawing.Color.White;
+            this.btXuatHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXuatHD.Location = new System.Drawing.Point(719, 575);
             this.btXuatHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btXuatHD.Name = "btXuatHD";
@@ -313,8 +315,8 @@ namespace QuanLyCHThuoc.BUL
             // 
             // clNameMedicine
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle3;
             this.clNameMedicine.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.clNameMedicine.HeaderText = "Thuốc điều trị";
             this.clNameMedicine.Items.AddRange(new object[] {
