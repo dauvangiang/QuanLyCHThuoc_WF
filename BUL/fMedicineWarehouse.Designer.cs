@@ -340,6 +340,7 @@
             this.cbDanhMucChiTiet.Name = "cbDanhMucChiTiet";
             this.cbDanhMucChiTiet.Size = new System.Drawing.Size(168, 27);
             this.cbDanhMucChiTiet.TabIndex = 9;
+            this.cbDanhMucChiTiet.SelectedValueChanged += new System.EventHandler(this.cbDanhMuc_SelectedValueChanged);
             // 
             // tbGhiChu
             // 
@@ -690,6 +691,7 @@
             this.cbDanhMuc.Name = "cbDanhMuc";
             this.cbDanhMuc.Size = new System.Drawing.Size(252, 27);
             this.cbDanhMuc.TabIndex = 1;
+            this.cbDanhMuc.SelectedValueChanged += new System.EventHandler(this.cbDanhMuc_SelectedValueChanged);
             // 
             // tpDanhMuc
             // 

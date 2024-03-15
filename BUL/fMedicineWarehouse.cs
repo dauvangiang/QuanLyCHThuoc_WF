@@ -14,22 +14,22 @@ namespace QuanLyCHThuoc.BUL
 {
     public partial class fMedicineWarehouse : Form
     {
-        #region Biến toàn cục
+        #region Global variable
+
         string query = null;
         Button prevButton = null;
         SqlDataAdapter daSanPham = null, daDanhMuc = null, daPhanLoai = null, daNSX = null;
-        DataTable dtDanhMuc = null, dtPhanLoai = null, dtNSX = null, dtSanPham = null, dtDanhMucPL = null, dtDanhMucChiTiet = null, dtPhanLoaiChiTiet = null;
+        public DataTable dtSanPham = null;
+        DataTable dtDanhMuc = null, dtPhanLoai = null, dtNSX = null, dtDanhMucPL = null, dtDanhMucChiTiet = null, dtPhanLoaiChiTiet = null;
         string sqlConnection = "Data Source = MSI\\SQLEXPRESS; Initial Catalog = QUANLYCUAHANGTHUOC; Integrated Security = True";
         SqlConnection conn = null;
+
         #endregion
 
         public fMedicineWarehouse()
         {
             InitializeComponent();
-            //this.cbDanhMuc.SelectedItem = "Tất cả";
-            //this.cbPhanLoai.SelectedItem = "A → Z";
         }
-
 
         private void tbTimKiem_Click(object sender, EventArgs e)
         {
@@ -159,8 +159,13 @@ namespace QuanLyCHThuoc.BUL
 
         private void btTimKiem_Click(object sender, EventArgs e)
         {
-            //Truy vấn dữ liệu từ database
-            //Trả kết quả tìm kiếm lên DataGridView dgvDsSPKho
+            cbDanhMuc.SelectedValue = cbPhanLoai.SelectedValue = "";
+            query = "Select MaSP as [Mã số], TenSP as [Tên], TenDM as [Danh mục], TenPL as [Phân loại], TenNSX as [Sản phẩm của], DonViTinh as [Đơn vị], SP.NSX as [Ngày sản xuất], SP.HSD as [Hạn sử dụng], GiaNhap as [Giá nhập], GiaBan as [Giá bán], SoLuong as [Số lượng], GhiChu as [Ghi chú] " +
+                " From SanPham SP, DanhMuc DM, PhanLoai PL, NSX " +
+                " Where TenSP like N'" + tbTimKiem.Text.Trim() + "%' and SP.MaPL = PL.MaPL and PL.MaDM = DM.MaDM and SP.MaNSX = NSX.MaNSX";
+            daSanPham = new SqlDataAdapter(query, conn);
+            dtSanPham.Rows.Clear();
+            daSanPham.Fill(dtSanPham);
         }
 
         private void btXoaDanhMuc_Click(object sender, EventArgs e)
@@ -341,6 +346,36 @@ namespace QuanLyCHThuoc.BUL
             this.tbGhiChu.Text = currRow.Cells[11].Value.ToString().Trim();
         }
 
+        private void cbDanhMuc_SelectedValueChanged(object sender, EventArgs e)
+        {
+            /*
+            ComboBox cbPL = null, cb = (ComboBox)sender;
+            daPhanLoai = null;
+            DataTable dt = null;
+            if (cb == cbDanhMuc) cbPL = cbPhanLoai;
+            else if (cb == cbDanhMucChiTiet) cbPL = cbPhanLoaiChiTiet;
+            if (cb.SelectedValue != null)
+            {
+                MessageBox.Show(cb.SelectedValue.ToString() + "'");
+                if (cb.Text.Trim() == "Tất cả")
+                {
+                    query = "Select MaPL as [Mã số], TenPL as [Tên] from PhanLoai";
+                }
+                else
+                {
+                    query = "Select MaPL as [Mã số], TenPL as [Tên] from PhanLoai where MaDM = '" + cb.SelectedValue.ToString() + "'";
+                }
+                daPhanLoai = new SqlDataAdapter(query, conn);
+                dt = new DataTable();
+                daPhanLoai.Fill(dt);
+                cbPL.DataSource = dt;
+                cbPL.DisplayMember = "Tên";
+                cbPL.ValueMember = "Mã số";
+                cbPL.SelectedValue = "";
+            }
+            */
+        }
+
         private void dgvDanhMuc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1)
@@ -361,7 +396,7 @@ namespace QuanLyCHThuoc.BUL
             if (tbTimKiem.Text.Trim().Length != 0 && tbTimKiem.Text != "Tìm kiếm...")
             {
                 panelTimKiem.Visible = lvTimKiem.Visible = true;
-                querySearch = "Select TenDM from DanhMuc where TenDm like N'" + tbTimKiem.Text.Trim() + "%'";
+                querySearch = "Select TenSP from SanPham where TenSP like N'" + tbTimKiem.Text.Trim() + "%'";
                 DataTable dtSearch = DataProvider.Instance.ExecuteQuery(querySearch);
                 lvTimKiem.Items.Clear();
                 //lvTimKiem.Items.Add(new ListViewItem("Vi du"));
@@ -430,6 +465,7 @@ namespace QuanLyCHThuoc.BUL
             cbDanhMucPL.DataSource = dtDanhMucPL; cbDanhMucChiTiet.DataSource = dtDanhMucChiTiet;
             cbDanhMucPL.DisplayMember = cbDanhMuc.DisplayMember = cbDanhMucChiTiet.DisplayMember = "Tên";
             cbDanhMucPL.ValueMember = cbDanhMuc.ValueMember = cbDanhMucChiTiet.ValueMember = "Mã số";
+            cbDanhMucPL.SelectedValue = cbDanhMucChiTiet.SelectedValue = "";
 
             //Phan loai
             query = "Select MaPL as [Mã số], TenPL as [Tên], TenDM as [Danh mục] from PhanLoai, DanhMuc where PhanLoai.MaDM = DanhMuc.MaDM";
@@ -439,6 +475,7 @@ namespace QuanLyCHThuoc.BUL
             dgvPhanLoai.DataSource = cbPhanLoai.DataSource = dtPhanLoai;
             cbPhanLoaiChiTiet.DataSource = dtPhanLoaiChiTiet;
             cbPhanLoai.DisplayMember = cbPhanLoaiChiTiet.DisplayMember = "Tên"; cbPhanLoai.ValueMember = cbPhanLoaiChiTiet.ValueMember = "Mã số";
+            cbPhanLoaiChiTiet.SelectedValue = "";
 
             //NSX
             query = "Select MaNSX as [Mã số], TenNSX as [Tên], SDT as [Số điện thoại] from NSX";
@@ -447,6 +484,7 @@ namespace QuanLyCHThuoc.BUL
             dgvDoiTac.DataSource = dtNSX;
             cbNhaSX.DataSource = dtNSX;
             cbNhaSX.DisplayMember = "Tên"; cbNhaSX.ValueMember = "Mã số";
+            cbNhaSX.SelectedValue = "";
         }
 
 
@@ -468,6 +506,10 @@ namespace QuanLyCHThuoc.BUL
                     //goi ham DataGridViewCell_Click cua tpSanPham
                     this.dgvDsSPKho_CellClick(this.dgvDsSPKho, e);
                 }
+                else
+                {
+                    btSuaSP.Enabled = btXoaSp.Enabled = false;
+                }
             }
             else if (tp == this.tpDanhMuc)
             {
@@ -479,6 +521,10 @@ namespace QuanLyCHThuoc.BUL
                     DataGridViewCellEventArgs e = new DataGridViewCellEventArgs(colIndex, rowIndex);
                     //goi ham DataGridViewCell_Click cua tpDanhMuc
                     this.dgvDanhMuc_CellClick(this.dgvDanhMuc, e);
+                }
+                else
+                {
+                    btSuaDanhMuc.Enabled = btXoaDanhMuc.Enabled = false;
                 }
             }
             else if (tp == this.tpPhanLoai)
@@ -493,6 +539,10 @@ namespace QuanLyCHThuoc.BUL
                     //goi ham DataGridViewCell_Click cua tpPhanLoai
                     this.dgvPhanLoai_CellClick(this.dgvPhanLoai, e);
                 }
+                else
+                {
+                    btSuaPhanLoai.Enabled = btXoaPhanLoai.Enabled = false;
+                }
             }
             else if (tp == tpDoiTac)
             {
@@ -504,6 +554,10 @@ namespace QuanLyCHThuoc.BUL
                     DataGridViewCellEventArgs e = new DataGridViewCellEventArgs(colIndex, rowIndex);
                     //goi ham DataGridViewCell_Click cua tpDoiTac
                     this.dgvDoiTac_CellClick(this.dgvDoiTac, e);
+                }
+                else
+                {
+                    btSuaDoiTac.Enabled = btXoaDoiTac.Enabled = false;
                 }
             }
         }
@@ -568,28 +622,7 @@ namespace QuanLyCHThuoc.BUL
             tb.BackColor = openOrClose == 1 ? Color.White : System.Drawing.SystemColors.Control;
         }
 
-        /*
-        private void FillFunction(SqlDataAdapter da, ref List<DataTable> dts)
-        {
-            if (da == null) return;
-            int n = dts.Count;
-            for (int i = 0; i < n; i++)
-            {
-                if (dts[i] == null) dts[i] = new DataTable();
-                else dts[i].Clear();
-                da.Fill(dts[i]);
-            }
-            //foreach (DataTable dt in dts)
-            //{
-            //    da.Fill(dt);
-            //}
-        }
-        */
         
-
-
-
-
         #endregion
 
         

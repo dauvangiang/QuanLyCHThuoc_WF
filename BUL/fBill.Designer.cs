@@ -30,7 +30,8 @@ namespace QuanLyCHThuoc.BUL
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btHuyHD = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,8 +51,8 @@ namespace QuanLyCHThuoc.BUL
             this.dgvDsSPHD = new System.Windows.Forms.DataGridView();
             this.clNameMedicine = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.clUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clQuanty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clQuanty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clIntoMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbNgayMua = new System.Windows.Forms.TextBox();
@@ -103,7 +104,7 @@ namespace QuanLyCHThuoc.BUL
             this.btHuyHD.Location = new System.Drawing.Point(804, 575);
             this.btHuyHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btHuyHD.Name = "btHuyHD";
-            this.btHuyHD.Size = new System.Drawing.Size(79, 37);
+            this.btHuyHD.Size = new System.Drawing.Size(79, 32);
             this.btHuyHD.TabIndex = 22;
             this.btHuyHD.Text = "Hủy";
             this.btHuyHD.UseVisualStyleBackColor = false;
@@ -128,7 +129,7 @@ namespace QuanLyCHThuoc.BUL
             this.btXuatHD.Location = new System.Drawing.Point(719, 575);
             this.btXuatHD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btXuatHD.Name = "btXuatHD";
-            this.btXuatHD.Size = new System.Drawing.Size(79, 37);
+            this.btXuatHD.Size = new System.Drawing.Size(79, 32);
             this.btXuatHD.TabIndex = 16;
             this.btXuatHD.Text = "Xuất HD";
             this.btXuatHD.UseVisualStyleBackColor = false;
@@ -172,6 +173,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbGiamGia.Size = new System.Drawing.Size(129, 27);
             this.tbGiamGia.TabIndex = 12;
             this.tbGiamGia.TabStop = false;
+            this.tbGiamGia.Text = "0";
             // 
             // label10
             // 
@@ -197,6 +199,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbTraLai.Size = new System.Drawing.Size(129, 27);
             this.tbTraLai.TabIndex = 15;
             this.tbTraLai.TabStop = false;
+            this.tbTraLai.Text = "0";
             // 
             // tbTongTT
             // 
@@ -211,6 +214,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbTongTT.Size = new System.Drawing.Size(129, 27);
             this.tbTongTT.TabIndex = 11;
             this.tbTongTT.TabStop = false;
+            this.tbTongTT.Text = "0";
             // 
             // tbKHDua
             // 
@@ -221,6 +225,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbKHDua.Name = "tbKHDua";
             this.tbKHDua.Size = new System.Drawing.Size(129, 27);
             this.tbKHDua.TabIndex = 14;
+            this.tbKHDua.TextChanged += new System.EventHandler(this.tbKHDua_TextChanged);
             // 
             // label11
             // 
@@ -247,6 +252,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbPhaiTT.Size = new System.Drawing.Size(129, 27);
             this.tbPhaiTT.TabIndex = 13;
             this.tbPhaiTT.TabStop = false;
+            this.tbPhaiTT.Text = "0";
             // 
             // label12
             // 
@@ -294,14 +300,18 @@ namespace QuanLyCHThuoc.BUL
             // 
             // dgvDsSPHD
             // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDsSPHD.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDsSPHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDsSPHD.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvDsSPHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDsSPHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clNameMedicine,
             this.clUnit,
-            this.clQuanty,
             this.clPrice,
+            this.clQuanty,
             this.clIntoMoney,
             this.clNote});
             this.dgvDsSPHD.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -312,22 +322,17 @@ namespace QuanLyCHThuoc.BUL
             this.dgvDsSPHD.RowTemplate.Height = 24;
             this.dgvDsSPHD.Size = new System.Drawing.Size(874, 218);
             this.dgvDsSPHD.TabIndex = 10;
+            this.dgvDsSPHD.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDsSPHD_CellValueChanged);
             // 
             // clNameMedicine
             // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle3;
-            this.clNameMedicine.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clNameMedicine.DefaultCellStyle = dataGridViewCellStyle6;
+            this.clNameMedicine.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.Nothing;
             this.clNameMedicine.HeaderText = "Thuốc điều trị";
-            this.clNameMedicine.Items.AddRange(new object[] {
-            "Thuốc 1",
-            "Thuốc 2",
-            "Thuốc 3",
-            "Thuốc 1",
-            "Thuốc 2",
-            "Thuốc 3"});
             this.clNameMedicine.MinimumWidth = 6;
             this.clNameMedicine.Name = "clNameMedicine";
+            this.clNameMedicine.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // clUnit
             // 
@@ -336,18 +341,18 @@ namespace QuanLyCHThuoc.BUL
             this.clUnit.Name = "clUnit";
             this.clUnit.ReadOnly = true;
             // 
-            // clQuanty
-            // 
-            this.clQuanty.HeaderText = "S.Lượng";
-            this.clQuanty.MinimumWidth = 6;
-            this.clQuanty.Name = "clQuanty";
-            // 
             // clPrice
             // 
             this.clPrice.HeaderText = "Đơn giá";
             this.clPrice.MinimumWidth = 6;
             this.clPrice.Name = "clPrice";
             this.clPrice.ReadOnly = true;
+            // 
+            // clQuanty
+            // 
+            this.clQuanty.HeaderText = "S.Lượng";
+            this.clQuanty.MinimumWidth = 6;
+            this.clQuanty.Name = "clQuanty";
             // 
             // clIntoMoney
             // 
@@ -398,6 +403,7 @@ namespace QuanLyCHThuoc.BUL
             this.tbSdtKH.Name = "tbSdtKH";
             this.tbSdtKH.Size = new System.Drawing.Size(308, 27);
             this.tbSdtKH.TabIndex = 9;
+            this.tbSdtKH.Leave += new System.EventHandler(this.tbSdtKH_Leave);
             // 
             // tbTenKH
             // 
@@ -476,6 +482,7 @@ namespace QuanLyCHThuoc.BUL
             this.Name = "fBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bán hàng";
+            this.Load += new System.EventHandler(this.fBill_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -517,8 +524,8 @@ namespace QuanLyCHThuoc.BUL
         private Button btHuyHD;
         private DataGridViewComboBoxColumn clNameMedicine;
         private DataGridViewTextBoxColumn clUnit;
-        private DataGridViewTextBoxColumn clQuanty;
         private DataGridViewTextBoxColumn clPrice;
+        private DataGridViewTextBoxColumn clQuanty;
         private DataGridViewTextBoxColumn clIntoMoney;
         private DataGridViewTextBoxColumn clNote;
     }
